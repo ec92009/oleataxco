@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-style="A">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Olea Tax Co. | Design Preview</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/logos/oleatax-logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=DM+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ===== SWITCHER BAR ===== */
+    .style-switcher {
+      position:fixed; top:0; left:0; right:0; z-index:999;
+      display:flex; align-items:center; justify-content:center; gap:0;
+      background:#111827; color:#fff;
+      font-family:Inter,system-ui,sans-serif;
+      font-size:.82rem; font-weight:600;
+      box-shadow:0 2px 20px rgba(0,0,0,.35);
+      height:48px;
+    }
+    .style-switcher button {
+      all:unset; cursor:pointer;
+      padding:12px 28px; height:100%;
+      display:flex; align-items:center; gap:8px;
+      color:rgba(255,255,255,.72);
+      transition:all .2s ease;
+      border-bottom:3px solid transparent;
+      font-weight:600; letter-spacing:.02em;
+    }
+    .style-switcher button:hover { color:rgba(255,255,255,.85); background:rgba(255,255,255,.06); }
+    .style-switcher button.active { color:#fff; border-bottom-color:#a08050; background:rgba(160,128,80,.12); }
+    .style-switcher .sep { width:1px; height:24px; background:rgba(255,255,255,.12); }
+    .style-switcher .label { color:rgba(255,255,255,.6); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; margin-right:12px; }
+    .style-switcher .theme-btn {
+      margin-left:auto; margin-right:16px;
+      padding:7px 16px; height:auto;
+      border:1px solid rgba(255,255,255,.2); border-radius:999px;
+      font-size:.75rem; letter-spacing:.04em;
+      color:rgba(255,255,255,.8);
+    }
+    .style-switcher .theme-btn:hover { color:#fff; border-color:rgba(255,255,255,.45); background:rgba(255,255,255,.06); }
+    body { padding-top:48px; }
+
+    /* ===== BASE RESET ===== */
+    *{box-sizing:border-box; margin:0; padding:0;}
+    html,body{max-width:100%;overflow-x:clip;background:var(--bg);color:var(--text);}
+    img{max-width:100%;display:block;}
+    a{text-decoration:none;color:inherit;}
+    ol,ul{padding-left:1.4em;}
+
+    /* ===== SHARED STRUCTURE ===== */
+    .shell{width:min(1120px,calc(100% - 40px));margin:auto;}
+
+    .topbar{
+      position:sticky; top:48px; z-index:20;
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:16px 0;
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+      background:color-mix(in srgb,var(--bg) 82%,transparent);
+    }
+    .brand-wrap{display:flex;align-items:center;gap:10px;}
+    .site-logo{width:38px;height:38px;border-radius:var(--logo-radius);object-fit:cover;border:1px solid var(--line);}
+    .brand-name{font-weight:800;letter-spacing:.01em;font-size:.95rem;}
+    .nav-links{display:flex;gap:4px;align-items:center;margin-left:auto;}
+    .nav-links a{
+      padding:7px 14px;border-radius:var(--radius);
+      font-weight:600;font-size:.85rem;color:var(--muted);
+      transition:color .15s,background .15s;
+    }
+    .nav-links a:hover{color:var(--text);background:var(--surface);}
+    .btn-cta{
+      padding:9px 20px;border-radius:var(--radius);
+      background:var(--accent);color:#fff;
+      font-weight:700;font-size:.85rem;
+      border:1px solid transparent;
+      transition:opacity .15s,transform .15s;
+    }
+    .btn-cta:hover{opacity:.88;transform:translateY(-1px);}
+
+    main{padding:0 0 80px;display:grid;gap:0;}
+
+    /* ===== SECTIONS ===== */
+    .section{padding:80px 0;}
+    .section + .section{border-top:1px solid var(--line);}
+    .section-label{
+      font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;
+      font-weight:700;color:var(--accent-text);margin-bottom:12px;
+    }
+    .section-title{font-size:clamp(1.6rem,3.5vw,2.6rem);line-height:1.08;letter-spacing:var(--heading-ls);}
+    .section-sub{color:var(--muted);max-width:56ch;line-height:1.6;margin-top:12px;font-size:.97rem;}
+
+    /* ===== HERO ===== */
+    .hero{padding:88px 0 72px;border-bottom:1px solid var(--line);}
+    .hero-inner{display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:start;}
+    .eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--accent-text);margin-bottom:14px;display:block;}
+    .hero h1{
+      font-size:clamp(2.4rem,5.5vw,4rem);
+      line-height:1.05; letter-spacing:var(--heading-ls);
+      max-width:18ch;
+    }
+    .lead{color:var(--muted);max-width:52ch;line-height:1.65;margin-top:16px;font-size:1rem;}
+    .trust-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+    .trust-badge{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:5px 12px;border-radius:999px;
+      border:1px solid var(--line);background:var(--surface);
+      font-size:.78rem;font-weight:600;color:var(--muted);
+    }
+    .trust-badge::before{content:"✓";color:var(--accent-text);font-size:.78rem;}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;}
+    .btn{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:12px 24px;border-radius:var(--radius);
+      font-weight:700;font-size:.9rem;
+      transition:all .18s ease;cursor:pointer;
+      border:1px solid transparent;
+    }
+    .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+    .btn.primary:hover{opacity:.88;transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.15);}
+    .btn.secondary{background:var(--surface);color:var(--text);border-color:var(--line);}
+    .btn.secondary:hover{background:var(--surface-2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.07);}
+
+    /* ===== HERO SIDEBAR ===== */
+    .hero-sidebar{display:grid;gap:14px;}
+    .sidebar-card{
+      padding:22px;border-radius:var(--card-radius);
+      border:1px solid var(--line);background:var(--surface);
+    }
+    .sidebar-card h3{font-size:.95rem;font-weight:700;margin-bottom:10px;}
+    .sidebar-card ul{list-style:none;padding:0;display:grid;gap:8px;}
+    .sidebar-card li{font-size:.88rem;color:var(--muted);padding-left:1.1em;position:relative;}
+    .sidebar-card li::before{content:"→";position:absolute;left:0;color:var(--accent-text);font-size:.78rem;}
+    .sidebar-quote{
+      font-size:1.05rem;line-height:1.45;color:var(--text);
+      font-style:italic;
+      font-family:var(--quote-font);
+    }
+    .sidebar-quote-attr{margin-top:8px;font-size:.78rem;color:var(--muted);font-style:normal;}
+
+    /* ===== WHAT CHANGES ===== */
+    .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;}
+    .pillar{
+      padding:28px 24px;border-radius:var(--card-radius);
+      border:1px solid var(--line);background:var(--surface);
+      position:relative;overflow:hidden;
+      transition:transform .2s,box-shadow .2s;
+    }
+    .pillar:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.09);}
+    .pillar-num{display:block;font-size:.7rem;font-weight:800;letter-spacing:.12em;color:var(--accent-text);margin-bottom:16px;}
+    .pillar h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;}
+    .pillar p{font-size:.9rem;color:var(--muted);line-height:1.55;}
+
+    /* ===== ABOUT ===== */
+    .about-grid{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start;margin-top:28px;}
+    .about-photo{
+      width:100%;border-radius:var(--card-radius);
+      border:1px solid var(--line);
+      box-shadow:0 8px 32px rgba(0,0,0,.1);
+      aspect-ratio:4/5;object-fit:cover;
+    }
+    .about-text p{color:var(--muted);line-height:1.65;margin-bottom:14px;font-size:.97rem;}
+    .about-text strong{color:var(--text);}
+
+    /* ===== SERVICES ===== */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;}
+    .service-card{
+      padding:30px 26px;border-radius:var(--card-radius);
+      border:1px solid var(--line);background:var(--surface);
+      display:grid;grid-template-rows:auto auto 1fr auto;gap:10px;
+    }
+    .service-card h3{font-size:1.1rem;font-weight:700;}
+    .service-card .desc{font-size:.88rem;color:var(--muted);line-height:1.55;}
+    .service-card ul{list-style:none;padding:0;display:grid;gap:7px;margin-top:4px;}
+    .service-card li{font-size:.85rem;color:var(--muted);padding-left:1.1em;position:relative;}
+    .service-card li::before{content:"·";position:absolute;left:0;color:var(--accent-text);font-weight:900;}
+    .service-highlight{
+      border-color:var(--accent);
+      background:color-mix(in srgb,var(--accent) 5%,var(--surface));
+    }
+
+    /* ===== PROCESS ===== */
+    .process-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:8px;}
+    .steps-list{list-style:none;padding:0;display:grid;gap:24px;margin-top:24px;}
+    .step{display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:start;}
+    .step-num{
+      width:40px;height:40px;border-radius:var(--step-radius);
+      display:flex;align-items:center;justify-content:center;
+      background:var(--accent);color:#fff;
+      font-weight:800;font-size:.88rem;flex-shrink:0;
+    }
+    .step-body h4{font-size:.95rem;font-weight:700;margin-bottom:4px;}
+    .step-body p{font-size:.88rem;color:var(--muted);line-height:1.55;}
+    .fit-card{
+      padding:30px 26px;border-radius:var(--card-radius);
+      border:1px solid var(--line);background:var(--surface);
+      margin-top:24px;
+    }
+    .fit-card p{color:var(--muted);line-height:1.6;font-size:.93rem;margin-bottom:10px;}
+    .fit-card p:last-child{margin-bottom:0;}
+
+    /* ===== STATS STRIP ===== */
+    .stats-strip{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      padding:40px 0;gap:0;
+    }
+    .stat{
+      padding:0 32px;
+      border-right:1px solid var(--line);
+      display:grid;gap:6px;
+    }
+    .stat:first-child{padding-left:0;}
+    .stat:last-child{border-right:none;}
+    .stat-value{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1;color:var(--accent-text);}
+    .stat-label{font-size:.88rem;color:var(--muted);line-height:1.4;}
+
+    /* ===== FAQ ===== */
+    .faqs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px;}
+    .faq{
+      padding:22px;border-radius:var(--card-radius);
+      border:1px solid var(--line);background:var(--surface);
+    }
+    .faq h3{font-size:.95rem;font-weight:700;margin-bottom:8px;}
+    .faq p{font-size:.88rem;color:var(--muted);line-height:1.55;}
+
+    /* ===== BOOK CALL ===== */
+    .book-section{background:var(--surface);}
+    .book-inner{
+      display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;
+      padding:80px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    }
+    .book-copy h2{margin-bottom:14px;}
+    .book-copy p{color:var(--muted);line-height:1.65;font-size:.97rem;margin-bottom:14px;}
+    .book-copy ul{list-style:none;padding:0;display:grid;gap:8px;margin-bottom:24px;}
+    .book-copy li{font-size:.9rem;color:var(--muted);padding-left:1.3em;position:relative;}
+    .book-copy li::before{content:"✓";position:absolute;left:0;color:var(--accent-text);font-weight:700;}
+    .booking-form{
+      padding:32px;border-radius:var(--card-radius);
+      border:1px solid var(--line);background:var(--bg);
+      display:grid;gap:16px;
+    }
+    .field{display:grid;gap:6px;}
+    .field label{font-size:.85rem;font-weight:700;color:var(--text);}
+    .field input, .field select{
+      width:100%;padding:11px 14px;
+      border:1px solid var(--line);border-radius:calc(var(--radius) * .7);
+      background:var(--surface);color:var(--text);
+      font:inherit;font-size:.9rem;
+    }
+    .field input:focus-visible, .field select:focus-visible{
+      outline:2px solid var(--accent);outline-offset:2px;
+    }
+    .book-note{font-size:.78rem;color:var(--muted);}
+
+    /* ===== FOOTER ===== */
+    .footer{padding:32px 0;border-top:1px solid var(--line);}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .footer-brand{font-weight:700;font-size:.9rem;}
+    .footer-note{font-size:.8rem;color:var(--muted);}
+
+    /* ==========================================================
+       OPTION A — "Prestige"
+       Deep slate + gold, Playfair Display, high-end finance feel
+       ========================================================== */
+    [data-style="A"]{
+      --bg:#f7f6f3;
+      --surface:#ffffff;
+      --surface-2:#eeebe6;
+      --text:#0e1116;
+      --muted:#62625a;
+      --line:#e0ddd8;
+      --accent:#8b6914;
+      --accent-text:#8b6914;
+      --radius:4px;
+      --card-radius:6px;
+      --logo-radius:8px;
+      --step-radius:4px;
+      --heading-ls:-0.025em;
+      --quote-font:"Playfair Display",Georgia,serif;
+    }
+    [data-style="A"][data-theme="dark"]{
+      --bg:#0a0c10;
+      --surface:#121620;
+      --surface-2:#171c26;
+      --text:#e8ecf4;
+      --muted:#8891a4;
+      --line:#1e2434;
+      --accent:#c9a84c;
+      --accent-text:#c9a84c;
+    }
+    [data-style="A"] body{font-family:Inter,"DM Sans",system-ui,sans-serif;}
+    [data-style="A"] h1,[data-style="A"] h2{font-family:"Playfair Display",Georgia,serif;font-weight:700;}
+    [data-style="A"] .hero h1{letter-spacing:-.01em;font-size:clamp(2.6rem,5.5vw,4.2rem);}
+    [data-style="A"] .section-title{font-family:"Playfair Display",Georgia,serif;font-weight:700;}
+    [data-style="A"] .pillar h3{font-family:"Playfair Display",Georgia,serif;font-weight:500;}
+    [data-style="A"] .service-card h3{font-family:"Playfair Display",Georgia,serif;font-weight:500;}
+    [data-style="A"] .stat-value{font-family:"Playfair Display",Georgia,serif;font-weight:900;}
+    [data-style="A"] .sidebar-quote{font-family:"Playfair Display",Georgia,serif;font-size:1.15rem;font-style:italic;}
+    [data-style="A"] .pillar{border-top:2px solid var(--accent);}
+    [data-style="A"] .service-highlight{border-top:2px solid var(--accent);background:color-mix(in srgb,var(--accent) 4%,var(--surface));}
+    [data-style="A"] .step-num{border-radius:4px;background:var(--text);color:var(--bg);}
+    [data-style="A"][data-theme="dark"] .step-num{background:var(--accent);color:#0a0c10;}
+    [data-style="A"] .topbar{border-bottom-width:2px;}
+    [data-style="A"][data-theme="dark"] .btn-cta,
+    [data-style="A"][data-theme="dark"] .btn.primary{color:#0a0c10;}
+
+    /* ==========================================================
+       OPTION B — "Sage"
+       Forest green accent, clean white, DM Sans, modern firm
+       ========================================================== */
+    [data-style="B"]{
+      --bg:#f5f8f5;
+      --surface:#ffffff;
+      --surface-2:#ebf2eb;
+      --text:#131f14;
+      --muted:#4f6751;
+      --line:#d4e2d4;
+      --accent:#1a5c3a;
+      --accent-text:#1a5c3a;
+      --radius:10px;
+      --card-radius:14px;
+      --logo-radius:12px;
+      --step-radius:50%;
+      --heading-ls:-0.02em;
+      --quote-font:"DM Sans",Inter,sans-serif;
+    }
+    [data-style="B"][data-theme="dark"]{
+      --bg:#05100a;
+      --surface:#0b1a0f;
+      --surface-2:#0f2015;
+      --text:#d9eedc;
+      --muted:#6a9870;
+      --line:#163022;
+      --accent:#3db86a;
+      --accent-text:#3db86a;
+    }
+    [data-style="B"] body{font-family:"DM Sans",Inter,system-ui,sans-serif;}
+    [data-style="B"] h1,[data-style="B"] h2,[data-style="B"] .section-title{font-family:"DM Sans",sans-serif;font-weight:800;}
+    [data-style="B"] .hero h1{font-weight:800;letter-spacing:-.03em;}
+    [data-style="B"] .trust-badge::before{content:"✓";}
+    [data-style="B"] .sidebar-card{border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.06);}
+    [data-style="B"] .pillar{border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,.04);}
+    [data-style="B"] .pillar:hover{box-shadow:0 14px 36px rgba(0,0,0,.1);}
+    [data-style="B"] .service-card{border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,.04);}
+    [data-style="B"] .service-highlight{border-color:var(--accent);box-shadow:0 6px 28px rgba(26,92,58,.15);}
+    [data-style="B"] .stat-value{color:var(--accent-text);}
+    [data-style="B"] .about-photo{border-radius:20px;box-shadow:0 16px 48px rgba(0,0,0,.12);}
+    [data-style="B"] .booking-form{border-radius:20px;box-shadow:0 4px 24px rgba(0,0,0,.07);}
+    [data-style="B"] .btn.primary{border-radius:12px;}
+    [data-style="B"] .btn.secondary{border-radius:12px;}
+    [data-style="B"] .btn-cta{border-radius:12px;}
+    [data-style="B"] .book-section{background:color-mix(in srgb,var(--accent) 5%,var(--bg));}
+    [data-style="B"][data-theme="dark"] .btn-cta,
+    [data-style="B"][data-theme="dark"] .btn.primary{color:#05100a;}
+
+    /* ==========================================================
+       OPTION C — "Warmth"
+       Terracotta accent, warm cream, Playfair + DM Sans, boutique
+       ========================================================== */
+    [data-style="C"]{
+      --bg:#faf6f0;
+      --surface:#ffffff;
+      --surface-2:#f2ebe1;
+      --text:#2c1f14;
+      --muted:#7a6455;
+      --line:#e2d4c6;
+      --accent:#8a4f2b;
+      --accent-text:#8a4f2b;
+      --radius:999px;
+      --card-radius:18px;
+      --logo-radius:12px;
+      --step-radius:999px;
+      --heading-ls:-0.01em;
+      --quote-font:"Playfair Display",Georgia,serif;
+    }
+    [data-style="C"][data-theme="dark"]{
+      --bg:#120d08;
+      --surface:#1d1510;
+      --surface-2:#251b14;
+      --text:#f0e4d5;
+      --muted:#c0a088;
+      --line:#382a1e;
+      --accent:#d4784a;
+      --accent-text:#e09060;
+    }
+    [data-style="C"] body{font-family:"DM Sans",Inter,system-ui,sans-serif;}
+    [data-style="C"] h1,[data-style="C"] h2,[data-style="C"] .section-title{font-family:"Playfair Display",Georgia,serif;font-weight:700;}
+    [data-style="C"] .hero h1{font-family:"Playfair Display",Georgia,serif;font-weight:900;letter-spacing:-.01em;}
+    [data-style="C"] .sidebar-quote{font-family:"Playfair Display",Georgia,serif;font-size:1.2rem;font-style:normal;}
+    [data-style="C"] .stat-value{font-family:"Playfair Display",Georgia,serif;font-weight:900;color:var(--accent-text);}
+    [data-style="C"] .pillar{border-radius:18px;background:var(--surface-2);border-color:transparent;}
+    [data-style="C"] .pillar:hover{background:var(--surface);border-color:var(--line);}
+    [data-style="C"] .service-card{border-radius:18px;}
+    [data-style="C"] .service-highlight{
+      background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 8%,var(--surface)),var(--surface));
+      border-color:var(--accent);
+    }
+    [data-style="C"] .trust-badge{border-radius:999px;background:color-mix(in srgb,var(--accent) 8%,var(--surface));}
+    [data-style="C"] .sidebar-card{border-radius:18px;}
+    [data-style="C"] .about-photo{border-radius:22px;box-shadow:0 20px 56px rgba(0,0,0,.12);}
+    [data-style="C"] .booking-form{border-radius:22px;}
+    [data-style="C"] .book-section{background:var(--surface-2);}
+    [data-style="C"] .step-num{font-family:"Playfair Display",Georgia,serif;font-size:1rem;}
+    [data-style="C"] .faq{border-radius:18px;background:var(--surface-2);border-color:transparent;}
+    [data-style="C"] .field input,[data-style="C"] .field select{border-radius:12px;}
+    [data-style="C"][data-theme="dark"] .btn-cta,
+    [data-style="C"][data-theme="dark"] .btn.primary{color:#120d08;}
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width:940px){
+      .hero-inner,.about-grid,.process-grid,.book-inner{grid-template-columns:1fr;gap:32px;}
+      .pillars-grid,.services-grid,.faqs-grid{grid-template-columns:1fr;}
+      .stats-strip{grid-template-columns:1fr 1fr;}
+      .stats-strip .stat:nth-child(2){border-right:none;}
+      .stats-strip .stat:nth-child(3){grid-column:span 2;border-top:1px solid var(--line);padding-top:24px;}
+      .topbar .nav-links{display:none;}
+    }
+    @media (max-width:600px){
+      .style-switcher .label{display:none;}
+      .stats-strip{grid-template-columns:1fr;}
+      .stats-strip .stat{border-right:none;border-top:1px solid var(--line);padding-top:20px;}
+      .stats-strip .stat:first-child{border-top:none;padding-top:0;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== SWITCHER BAR ===== -->
+<div class="style-switcher" role="navigation" aria-label="Style options">
+  <span class="label">Style</span>
+  <button data-pick="A" class="active">A — Prestige</button>
+  <div class="sep"></div>
+  <button data-pick="B">B — Sage</button>
+  <div class="sep"></div>
+  <button data-pick="C">C — Warmth</button>
+  <span style="color:rgba(255,255,255,.65);font-size:.72rem;letter-spacing:.06em;margin-left:auto;margin-right:4px;">v35.7</span>
+  <button class="theme-btn" id="theme-toggle">☽ Dark</button>
+</div>
+
+<main>
+  <!-- ===== NAV ===== -->
+  <div class="topbar">
+    <div class="shell" style="display:flex;align-items:center;gap:14px;width:100%;max-width:min(1120px,calc(100% - 40px));margin:auto;">
+      <div class="brand-wrap">
+        <img class="site-logo" src="./assets/logos/oleatax-logo.png" alt="Olea Tax logo" />
+        <span class="brand-name">Olea Tax Co.</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Packages</a>
+        <a href="#about">About Kelly</a>
+        <a href="#process">Process</a>
+        <a href="#faqs">FAQs</a>
+      </nav>
+      <a class="btn-cta" href="#book" style="margin-left:auto;">Book a Call</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="shell">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Olea Tax Co. · Licensed CPA</span>
+          <h1>Strategic tax planning — not just annual filing</h1>
+          <p class="lead">
+            Olea Tax Co. helps business owners, real estate investors, and high-income families
+            make better financial decisions year-round with proactive planning and cleaner structure.
+          </p>
+          <div class="trust-badges">
+            <span class="trust-badge">Licensed CPA</span>
+            <span class="trust-badge">Nearly 10 years experience</span>
+            <span class="trust-badge">Remote &amp; local support</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn primary" href="#book">Book a Call</a>
+            <a class="btn secondary" href="#services">See Packages</a>
+          </div>
+        </div>
+        <aside class="hero-sidebar">
+          <div class="sidebar-card">
+            <h3>Who we serve best</h3>
+            <ul>
+              <li>Real estate investors managing growing portfolios</li>
+              <li>Business owners scaling revenue and complexity</li>
+              <li>High-income families needing integrated planning</li>
+            </ul>
+          </div>
+          <div class="sidebar-card">
+            <p class="sidebar-quote">"My goal is simple: move clients from reactive tax stress to confident, informed strategy."</p>
+            <p class="sidebar-quote-attr">— Kelly Olea, CPA · Founder</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <div class="shell">
+    <div class="stats-strip">
+      <div class="stat">
+        <span class="stat-value">10</span>
+        <span class="stat-label">Years of CPA experience advising complex clients</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Flexible service packages tailored to your needs</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">1</span>
+        <span class="stat-label">Dedicated CPA working directly with you</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHAT CHANGES ===== -->
+  <section class="section">
+    <div class="shell">
+      <p class="section-label">Strategy first</p>
+      <h2 class="section-title">What changes when planning comes before filing</h2>
+      <p class="section-sub">Tax is not a once-a-year event. When strategy leads, decisions get better and surprises get smaller.</p>
+      <div class="pillars-grid">
+        <div class="pillar">
+          <span class="pillar-num">01</span>
+          <h3>Fewer surprises</h3>
+          <p>Quarterly checkpoints and projection updates reduce last-minute tax shocks at year-end.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">02</span>
+          <h3>Better decisions</h3>
+          <p>Entity, compensation, and timing choices are evaluated before they become expensive mistakes.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">03</span>
+          <h3>Cleaner execution</h3>
+          <p>Structured workflows, clear timelines, and direct communication keep your team moving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="shell">
+      <p class="section-label">Founder perspective</p>
+      <h2 class="section-title">Built around long-term thinking</h2>
+      <div class="about-grid">
+        <img class="about-photo" src="assets/kelly-portrait.jpg" alt="Kelly Olea, CPA" loading="lazy" />
+        <div class="about-text">
+          <p><strong>I believe tax strategy should be intentional, integrated, and tailored to each client.</strong></p>
+          <p>
+            I'm a licensed CPA with nearly a decade of experience advising entrepreneurs, multi-entity
+            businesses, and growing founders. Before Olea Tax Co., I spent years inside tax departments
+            and advisory environments supporting complex client situations.
+          </p>
+          <p>
+            Over time, I saw how messy workflows, reactive deadlines, and fragmented communication
+            often distracted from what clients actually needed: clarity, structure, and thoughtful strategy.
+          </p>
+          <p>
+            I founded Olea Tax Co. to work differently. I work directly with each client to reduce tax
+            exposure, improve entity structure, and ensure business decisions are made intentionally —
+            not rushed at year-end.
+          </p>
+          <div class="cta-row" style="margin-top:20px;">
+            <a class="btn primary" href="#book">Start the conversation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section">
+    <div class="shell">
+      <p class="section-label">Service packages</p>
+      <h2 class="section-title">Choose your level of engagement</h2>
+      <p class="section-sub">From reliable annual filing to full proactive strategy — all with direct CPA access.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Tax Filing</h3>
+          <p class="desc">For individuals and business owners who need reliable, accurate tax preparation.</p>
+          <ul>
+            <li>Annual tax return preparation</li>
+            <li>Personalized document checklist</li>
+            <li>Email support for tax-related questions</li>
+          </ul>
+          <div class="cta-row" style="margin-top:16px;">
+            <a class="btn secondary" href="#book">Get started</a>
+          </div>
+        </div>
+        <div class="service-card service-highlight">
+          <h3>Tax Filing + Estimates</h3>
+          <p class="desc">For business owners who want help staying on top of quarterly tax payments.</p>
+          <ul>
+            <li>Annual tax return preparation</li>
+            <li>Quarterly estimated tax calculations</li>
+            <li>Personalized document checklist</li>
+            <li>Email support for tax-related questions</li>
+          </ul>
+          <div class="cta-row" style="margin-top:16px;">
+            <a class="btn primary" href="#book">Get started</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <h3>Tax Planning &amp; Filing</h3>
+          <p class="desc">For business owners who want proactive tax strategy throughout the year.</p>
+          <ul>
+            <li>Annual tax return preparation</li>
+            <li>Quarterly estimated tax calculations</li>
+            <li>Mid-year tax planning review</li>
+            <li>Year-end tax strategy session</li>
+            <li>Email advisory support</li>
+          </ul>
+          <div class="cta-row" style="margin-top:16px;">
+            <a class="btn secondary" href="#book">Get started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process" class="section">
+    <div class="shell">
+      <div class="process-grid">
+        <div>
+          <p class="section-label">How we work</p>
+          <h2 class="section-title">A clear process from day one</h2>
+          <ol class="steps-list">
+            <li class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h4>Discovery</h4>
+                <p>We review your goals, entity setup, and current tax posture together.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h4>Strategy plan</h4>
+                <p>You receive a clear roadmap with priority actions and a realistic timeline.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h4>Implementation</h4>
+                <p>Filings, estimates, and structure updates are executed alongside you.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num">4</div>
+              <div class="step-body">
+                <h4>Ongoing advisory</h4>
+                <p>Regular checkpoints keep strategy aligned as your life and business evolve.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <p class="section-label">Is this the right fit?</p>
+          <h2 class="section-title">Built for ongoing relationships</h2>
+          <div class="fit-card">
+            <p>This model is best for clients who want a strategic ongoing relationship — not one-off transactional filing.</p>
+            <p>Start with a strategy call and we will map the right next step together.</p>
+            <p style="font-size:.84rem;"><em>Boutique model: limited client slots to protect quality and response time.</em></p>
+          </div>
+          <div class="cta-row" style="margin-top:20px;">
+            <a class="btn primary" href="#book">Book a strategy call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQS ===== -->
+  <section id="faqs" class="section">
+    <div class="shell">
+      <p class="section-label">Questions</p>
+      <h2 class="section-title">Frequently asked</h2>
+      <div class="faqs-grid">
+        <div class="faq">
+          <h3>Do you only work locally?</h3>
+          <p>No. I work remotely with clients nationwide using secure document sharing and video meetings.</p>
+        </div>
+        <div class="faq">
+          <h3>Can you help if my books are behind?</h3>
+          <p>Yes. I can scope a catch-up phase first, then transition into regular ongoing support.</p>
+        </div>
+        <div class="faq">
+          <h3>Do you offer one-time tax services?</h3>
+          <p>Yes — and I can also recommend an ongoing package if your situation warrants it.</p>
+        </div>
+        <div class="faq">
+          <h3>How do I know which package fits me?</h3>
+          <p>A 20-minute intro call is the fastest way to map out the right fit with no obligation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOK CALL ===== -->
+  <section id="book" class="book-section">
+    <div class="shell">
+      <div class="book-inner">
+        <div class="book-copy">
+          <p class="section-label">Book a strategy call</p>
+          <h2 class="section-title">Let's talk about your tax situation</h2>
+          <p>Choose a time for a 20-minute intro call. We'll discuss your goals, current setup, and whether Olea Tax Co. is the right strategic fit.</p>
+          <ul>
+            <li>Fast, focused intake call</li>
+            <li>Clear next steps provided afterward</li>
+            <li>No obligation to proceed</li>
+          </ul>
+          <p class="book-note">Placeholder scheduler — final booking workflow will connect to Calendly or SquareSpace Scheduling.</p>
+        </div>
+        <div class="booking-form">
+          <div class="field">
+            <label for="call-date">Pick a date</label>
+            <input id="call-date" name="call_date" type="date" />
+          </div>
+          <div class="field">
+            <label for="call-time">Pick a start time</label>
+            <select id="call-time" name="call_time">
+              <option value="">Select a time</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="call-name">Your name</label>
+            <input id="call-name" name="call_name" type="text" placeholder="Kelly Olea" />
+          </div>
+          <div class="field">
+            <label for="call-email">Email address</label>
+            <input id="call-email" name="call_email" type="email" placeholder="you@example.com" />
+          </div>
+          <a class="btn primary" href="#" style="justify-content:center;" onclick="return false;">Reserve Placeholder Slot</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer-inner">
+        <span class="footer-brand">Olea Tax Co.</span>
+        <span class="footer-note">Design preview · Internal draft only</span>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+  // Style switcher
+  var btns = document.querySelectorAll('.style-switcher [data-pick]');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.documentElement.dataset.style = this.dataset.pick;
+      btns.forEach(function(b){ b.classList.remove('active'); });
+      this.classList.add('active');
+    });
+  });
+
+  // Theme toggle
+  var themBtn = document.getElementById('theme-toggle');
+  themBtn.addEventListener('click', function(){
+    var isDark = document.documentElement.dataset.theme === 'dark';
+    document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
+    themBtn.textContent = isDark ? '☽ Dark' : '☀ Light';
+  });
+
+  // Booking time slots
+  (function(){
+    var dateInput = document.getElementById('call-date');
+    var timeSelect = document.getElementById('call-time');
+    if(!dateInput || !timeSelect) return;
+    var today = new Date();
+    var pad = function(n){ return String(n).padStart(2,'0'); };
+    dateInput.min = today.getFullYear() + '-' + pad(today.getMonth()+1) + '-' + pad(today.getDate());
+    dateInput.value = dateInput.min;
+    function toLabel(h,m){
+      var suffix = h >= 12 ? 'PM' : 'AM';
+      var h12 = h % 12 || 12;
+      return h12 + ':' + pad(m) + ' ' + suffix;
+    }
+    for(var h = 10; h <= 16; h++){
+      for(var m = 0; m <= 30; m += 30){
+        if(h === 16 && m > 0) continue;
+        var opt = document.createElement('option');
+        opt.value = pad(h) + ':' + pad(m);
+        opt.textContent = toLabel(h,m);
+        timeSelect.appendChild(opt);
+      }
+    }
+  })();
+</script>
+</body>
+</html>
