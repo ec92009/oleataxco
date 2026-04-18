@@ -367,6 +367,14 @@ a.button.alt:active {
   gap: 0.7rem;
 }
 .cards.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cards.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.step-num {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
 .card {
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -525,6 +533,7 @@ a.button.alt:active {
     grid-column: 1 !important;
   }
   .cards.cols-3,
+  .cards.cols-4,
   .book-call-grid {
     grid-template-columns: 1fr;
   }
