@@ -184,6 +184,13 @@ a.button.alt:active {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
+}
+.topbar-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
 }
 .topbar nav {
   display: flex;
@@ -234,7 +241,6 @@ a.button.alt:active {
 .build-version {
   display: inline-flex;
   align-items: center;
-  margin-left: 0.45rem;
   padding: 0.14rem 0.45rem;
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -476,34 +482,6 @@ a.button.alt:active {
   outline-offset: 2px;
 }
 
-.draft-banner {
-  width: min(1150px, calc(100% - 1.5rem));
-  margin: 0.9rem auto 0.4rem;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 0.65rem 0.9rem;
-  background: color-mix(in srgb, var(--accent) 16%, var(--surface-1) 84%);
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.draft-banner-text strong {
-  display: block;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.78rem;
-  margin-bottom: 0.1rem;
-}
-
-.draft-banner-text p {
-  margin: 0;
-  font-size: 0.92rem;
-  color: var(--text);
-}
-
 .concept-neighborhood {
   --bg: #f6f1eb;
   --text: #2a211b;
@@ -544,11 +522,15 @@ a.button.alt:active {
     align-items: flex-start;
     flex-direction: column;
   }
+  .topbar-top {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .topbar-controls {
+    align-self: flex-end;
+  }
   .topbar nav {
     margin-left: 0;
-  }
-  .build-version {
-    margin-left: 0;
-    margin-top: 0.35rem;
   }
 }

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css?v=49.2" />
   <style>
     .bg-brand{position:fixed;inset:0;pointer-events:none;z-index:0;background:url('./assets/logos/oleatax-logo.png') center 18vh / min(58vmin,520px) no-repeat;opacity:.16;filter:drop-shadow(0 18px 40px rgba(0,0,0,.22));}
     body > *{position:relative;z-index:1;}
@@ -20,14 +20,6 @@
 <body class="concept-neighborhood">
   <div class="bg-brand" aria-hidden="true"></div>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <section class="draft-banner" aria-label="Draft disclaimer">
-    <div class="draft-banner-text">
-      <strong>MOCK DRAFT</strong>
-      <p>Internal review only. Content, pricing, and visuals are placeholders for team feedback.</p>
-    </div>
-    <span class="build-version" aria-label="Build version">v49.1</span>
-  </section>
-
   <main id="main-content" class="site-shell">
     <header class="topbar panel">
       <div class="topbar-top">
@@ -35,7 +27,10 @@
           <div class="brand"><img class="site-logo" src="./assets/logos/oleatax-logo.png" alt="Olea Tax logo" />Olea Tax Co.</div>
           <p class="brand-meta">Strategic CPA advisory for business owners, real estate investors, and high-income families</p>
         </div>
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"></button>
+        <div class="topbar-controls">
+          <span class="build-version" aria-label="Build version">v49.2</span>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"></button>
+        </div>
       </div>
       <nav aria-label="Primary">
         <a href="#services">Packages</a>
@@ -284,6 +279,6 @@
       }
     })();
   </script>
-  <script src="assets/theme-toggle.js"></script>
+  <script src="assets/theme-toggle.js?v=49.2"></script>
 </body>
 </html>
