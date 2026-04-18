@@ -172,21 +172,26 @@ a.button.alt:active {
 }
 .topbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-bottom: 1rem;
-  padding: 0.7rem 0.9rem;
+  padding: 0.8rem 0.9rem 0.6rem;
   border-radius: 14px;
   border: 1px solid var(--line);
   background: var(--surface-2);
+}
+.topbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .topbar nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   align-items: center;
-  margin-left: auto;
+  border-top: 1px solid var(--line);
+  padding-top: 0.5rem;
 }
 .topbar a {
   text-decoration: none;
@@ -215,6 +220,7 @@ a.button.alt:active {
 .brand {
   font-weight: 800;
   letter-spacing: 0.02em;
+  font-size: 1.25rem;
 }
 .brand-wrap {
   display: grid;
