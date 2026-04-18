@@ -5,8 +5,8 @@
 - Status: Draft
 - Product: Olea Tax Co website
 - Product type: Marketing and lead-generation site
-- Current preview: `https://ec92009.github.io/Codex/oleataxco/`
-- Local workspace: `~/Codex/web/github.io/oleataxco`
+- Current preview: `https://ec92009.github.io/oleataxco/`
+- Local workspace: `~/Dev/oleataxco`
 
 ## 1. Product Summary
 

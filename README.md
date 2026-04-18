@@ -26,11 +26,11 @@ Each option includes a dark mode toggle. All text passes WCAG AA contrast (4.5:1
 ## Local Preview
 
 ```bash
-cd ~/Dev/Webapps
+cd ~/Dev/oleataxco
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/oleataxco/preview.html`
+Open `http://localhost:8000/preview.html`
 
 ## Current Build
 
@@ -43,7 +43,7 @@ Open `http://localhost:8000/oleataxco/preview.html`
 
 The current site uses this founder photo path:
 
-- `oleataxco/assets/kelly-portrait.jpg`
+- `assets/kelly-portrait.jpg`
 
 Add/replace that file to update the photo on the live draft homepage.
 
