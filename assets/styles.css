@@ -388,7 +388,6 @@ a.button.alt:active {
   border-radius: 16px;
   overflow: auto;
   background: var(--surface-2);
-  min-height: 420px;
 }
 .booking-form {
   display: grid;
