@@ -21,15 +21,18 @@
   <div class="bg-brand" aria-hidden="true"></div>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <section class="draft-banner" aria-label="Draft disclaimer">
-    <strong>MOCK DRAFT</strong>
-    <p>Internal review only. Content, pricing, and visuals are placeholders for team feedback.</p>
+    <div class="draft-banner-text">
+      <strong>MOCK DRAFT</strong>
+      <p>Internal review only. Content, pricing, and visuals are placeholders for team feedback.</p>
+    </div>
+    <span class="build-version" aria-label="Build version">v34.0</span>
   </section>
 
   <main id="main-content" class="site-shell">
     <header class="topbar panel">
       <div class="brand-wrap">
         <div class="brand"><img class="site-logo" src="./assets/logos/oleatax-logo.png" alt="Olea Tax logo" />Olea Tax Co.</div>
-        <p class="brand-meta">Strategic CPA advisory for business owners, real estate investors, and high-income families <span class="build-version" aria-label="Build version">v34.0</span></p>
+        <p class="brand-meta">Strategic CPA advisory for business owners, real estate investors, and high-income families</p>
       </div>
       <nav aria-label="Primary">
         <a href="#services">Packages</a>
@@ -38,7 +41,7 @@
         <a href="#faqs">FAQs</a>
         <a class="button" href="#book-call">Book a Call</a>
       </nav>
-      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle color theme">Theme</button>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"></button>
     </header>
 
     <section class="hero">
@@ -69,15 +72,7 @@
         </div>
         <div class="card">
           <p class="quote">"My goal is simple: move clients from reactive tax stress to confident, informed strategy."</p>
-          <p class="small">Draft brand voice statement</p>
-        </div>
-        <div class="card">
-          <h3>Planning models</h3>
-          <p class="small">Reference PDFs used for service structure and internal planning.</p>
-          <div class="cta-row resource-links">
-            <a class="button alt" href="assets/Scalable-Tax-Planning-Pod-Model.pdf" target="_blank" rel="noopener">Pod Model PDF</a>
-            <a class="button alt" href="assets/Workload-and-Task-Justification-Model.pdf" target="_blank" rel="noopener">Task Model PDF</a>
-          </div>
+          <p class="small">— Kelly Olea, CPA</p>
         </div>
       </aside>
     </section>
@@ -167,23 +162,27 @@
     </section>
 
     <section class="section-grid">
-      <section id="process" class="section panel span-6">
-        <h2>How we work</h2>
-        <ol>
-          <li><strong>Discovery:</strong> we review goals, entity setup, and current tax posture.</li>
-          <li><strong>Strategy plan:</strong> you get a clear roadmap with priority actions and timeline.</li>
-          <li><strong>Implementation:</strong> filings, estimates, and structure updates are executed with you.</li>
-          <li><strong>Ongoing advisory:</strong> regular checkpoints keep strategy aligned as life and business evolve.</li>
-        </ol>
-      </section>
-      <section class="section panel span-6">
-        <h2>Is this the right fit?</h2>
-        <div class="card">
-          <p>This model is best for clients who want an ongoing strategic relationship, not one-off transactional filing only.</p>
-          <p class="small">If that is what you want, start with a strategy call and we will map the right next step.</p>
+      <div class="section panel span-12">
+        <div class="two-col-split">
+          <section id="process">
+            <h2>How we work</h2>
+            <ol>
+              <li><strong>Discovery:</strong> we review goals, entity setup, and current tax posture.</li>
+              <li><strong>Strategy plan:</strong> you get a clear roadmap with priority actions and timeline.</li>
+              <li><strong>Implementation:</strong> filings, estimates, and structure updates are executed with you.</li>
+              <li><strong>Ongoing advisory:</strong> regular checkpoints keep strategy aligned as life and business evolve.</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Is this the right fit?</h2>
+            <div class="card">
+              <p>This model is best for clients who want an ongoing strategic relationship, not one-off transactional filing only.</p>
+              <p class="small">If that is what you want, start with a strategy call and we will map the right next step.</p>
+            </div>
+            <p class="small">Boutique model: limited client slots to protect quality and response time.</p>
+          </section>
         </div>
-        <p class="small">Boutique model: limited client slots to protect quality and response time.</p>
-      </section>
+      </div>
     </section>
 
     <section id="book-call" class="section panel">
@@ -198,7 +197,6 @@
             <li>Clear next steps afterward</li>
             <li>No obligation to proceed</li>
           </ul>
-          <p class="small">Placeholder scheduler only for draft review (no external booking service connected yet).</p>
         </div>
         <div class="calendar-embed" aria-label="Booking calendar">
           <form class="booking-form" action="#" method="post" onsubmit="return false;">
@@ -213,13 +211,12 @@
               </select>
             </div>
             <div class="booking-row">
-              <button type="button" class="button">Reserve Placeholder Slot</button>
+              <button type="button" class="button">Reserve a Slot</button>
             </div>
             <p class="small">Available window shown: 10:00 AM to 4:00 PM.</p>
           </form>
         </div>
       </div>
-      <p class="small book-call-note">This is a UI placeholder. Final booking workflow can later connect to SquareSpace Scheduling, Calendly, or another provider.</p>
     </section>
 
     <section id="faqs" class="section panel">
@@ -232,11 +229,11 @@
     </section>
 
     <section id="contact" class="section panel">
-      <h2>Contact section idea</h2>
-      <p>Use a warm intro paragraph, a SquareSpace form, and optional office hours/location details if Kelly wants local clients to call.</p>
+      <h2>Get in touch</h2>
+      <p>Ready to take a more strategic approach to your taxes? Reach out directly or book a call to get started.</p>
       <div class="cta-row">
-        <a class="button" href="#">Send a Message</a>
-        <a class="button alt" href="#">Call Kelly</a>
+        <a class="button" href="mailto:hello@oleataxco.com">Send a Message</a>
+        <a class="button alt" href="#book-call">Book a Call</a>
       </div>
     </section>
   </main>

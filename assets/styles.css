@@ -415,6 +415,22 @@ a.button.alt:active {
 .book-call-note {
   margin-top: 0.7rem;
 }
+
+.two-col-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.two-col-split > section h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 950px) {
+  .two-col-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
 .quote {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.35rem;
@@ -423,70 +439,28 @@ a.button.alt:active {
 }
 
 .theme-toggle {
-  position: static;
-  z-index: 1;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
   border: 1px solid var(--line);
-  background: #ffffff;
+  background: var(--surface-1);
   color: var(--text);
   border-radius: 999px;
-  padding: 0.3rem 0.52rem;
-  font: inherit;
-  font-weight: 600;
-  font-size: 0.86rem;
+  padding: 0;
   cursor: pointer;
+  flex-shrink: 0;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.theme-toggle:hover {
+  background: var(--surface-3);
 }
 
 .theme-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
-}
-
-.theme-toggle .toggle-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.01em;
-  color: var(--muted);
-  line-height: 1;
-  min-width: 1.9rem;
-  text-align: center;
-}
-
-.theme-toggle .toggle-track {
-  width: 2.65rem;
-  height: 1.45rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--surface-3);
-  position: relative;
-  transition: background 180ms ease;
-}
-
-.theme-toggle .toggle-thumb {
-  position: absolute;
-  top: 0.1rem;
-  left: 0.13rem;
-  width: 1.05rem;
-  height: 1.05rem;
-  border-radius: 999px;
-  background: var(--text);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  transition: transform 180ms ease, background 180ms ease;
-}
-
-.theme-toggle[aria-pressed="true"] .toggle-track {
-  background: color-mix(in srgb, var(--accent) 70%, var(--surface-2) 30%);
-}
-
-.theme-toggle[aria-pressed="true"] .toggle-thumb {
-  transform: translateX(1.15rem);
-  background: color-mix(in srgb, var(--button-text) 25%, #ffffff 75%);
-}
-
-.theme-toggle[aria-pressed="true"] .toggle-label-dark,
-.theme-toggle[aria-pressed="false"] .toggle-label-light {
-  color: var(--text);
 }
 
 .draft-banner {
@@ -497,9 +471,13 @@ a.button.alt:active {
   padding: 0.65rem 0.9rem;
   background: color-mix(in srgb, var(--accent) 16%, var(--surface-1) 84%);
   box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.draft-banner strong {
+.draft-banner-text strong {
   display: block;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -507,7 +485,7 @@ a.button.alt:active {
   margin-bottom: 0.1rem;
 }
 
-.draft-banner p {
+.draft-banner-text p {
   margin: 0;
   font-size: 0.92rem;
   color: var(--text);
