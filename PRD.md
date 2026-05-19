@@ -12,7 +12,7 @@
 
 Olea Tax Co needs a professional website that positions the firm as a strategic CPA partner for business owners, real estate investors, and high-income families. The website should communicate that the firm offers proactive tax planning, not just annual filing, and should convert qualified visitors into consultation requests.
 
-The current site is a draft marketing homepage with placeholder booking UI and draft copy. This PRD defines the requirements for a production-ready website that can launch publicly on a simple stack first and later move into SquareSpace or another CMS if needed.
+The current site is a draft marketing homepage with async-first inquiry copy and draft content. This PRD defines the requirements for a production-ready website that can launch publicly on a simple stack first and later move into SquareSpace or another CMS if needed.
 
 ## 2. Problem
 
@@ -26,7 +26,7 @@ The current draft site does a reasonable job of introducing the offer, but it st
 - Attract qualified leads from the right client profiles.
 - Build trust quickly through positioning, founder credibility, and process clarity.
 - Make service packages understandable without requiring a sales call first.
-- Create a clear primary conversion path for booking or inquiry.
+- Create a clear primary conversion path for async inquiry.
 
 ## 4. Non-Goals
 
@@ -57,7 +57,7 @@ The current draft site does a reasonable job of introducing the offer, but it st
 - See how strategic planning differs from basic tax filing
 - Understand available service packages and what each includes
 - Learn how the working relationship will feel and function
-- Book a call or contact Kelly without friction
+- Contact Kelly without needing to coordinate calendars upfront
 
 ## 7. Value Proposition
 
@@ -83,13 +83,13 @@ Strategic CPA advisory for clients who want tax planning integrated into busines
 - Consultation request rate
 - Qualified lead volume
 - Click-through rate on primary CTA
-- Percentage of visitors reaching service and booking sections
+- Percentage of visitors reaching service and inquiry sections
 
 ### Secondary metrics
 
 - FAQ engagement
 - Scroll depth through founder and service sections
-- Contact action split between booking, email, and phone
+- Contact action split between email, DM, and phone if phone is offered
 - Mobile conversion rate
 
 ## 10. Product Principles
@@ -110,7 +110,7 @@ The production site should include these sections in this order:
 5. Service packages
 6. Process
 7. Qualification / fit section
-8. Booking or inquiry section
+8. Async inquiry section
 9. FAQ
 10. Contact section
 
@@ -127,7 +127,7 @@ Future optional pages:
 
 - Clear brand display
 - Short positioning line under or near brand
-- Navigation to services, founder/about, process, FAQ, and booking
+- Navigation to services, founder/about, process, FAQ, and inquiry
 - Primary CTA visible in header
 
 ### 12.2 Hero
@@ -161,11 +161,12 @@ Future optional pages:
 - Signal that the firm is best for advisory-minded clients
 - Support premium positioning without sounding exclusionary
 
-### 12.7 Booking / inquiry section
+### 12.7 Async inquiry section
 
 - Include one primary lead path at launch
-- If scheduler is not live, replace placeholder UI with a real inquiry path
-- If scheduling is live, it must feel complete and trustworthy
+- Prefer email and professional DM for first contact while Olea Tax Co is not Kelly's full-time practice
+- Make it clear that calls are scheduled only after fit and urgency are understood
+- Move sensitive tax documents and detailed financial information to secure sharing, not social DMs
 
 ### 12.8 FAQ section
 
@@ -202,7 +203,7 @@ Future optional pages:
 
 - Kelly’s final copy approval
 - Final phone/email/contact method
-- Decision on whether booking is real or inquiry-based
+- Final async channel decisions, including official email and social DM profile links
 - Any legal/compliance copy needed for launch
 
 ## 14. Visual and Brand Requirements
@@ -236,7 +237,7 @@ Future optional pages:
 ## 16. Risks
 
 - Placeholder content can undermine trust if it remains too long
-- A fake scheduler can hurt conversion more than help it
+- A direct scheduler can create availability expectations that do not match Kelly's current capacity
 - If positioning becomes too broad, the site may attract the wrong leads
 - If positioning becomes too narrow, the lead pool may be unnecessarily constrained
 - Without concrete trust builders, premium advisory positioning may feel unsupported
@@ -252,6 +253,6 @@ Future optional pages:
 
 1. Finalize Kelly’s decisions on target clients, brand voice, and CTA path.
 2. Replace all placeholder or draft-only elements with real launch-ready copy and links.
-3. Decide whether the primary conversion should be booking, contact form, phone, or email.
+3. Finalize the async intake stack: email, professional DMs, intake form, secure document-sharing handoff, and optional calls after fit.
 4. Add final trust builders such as credentials, service area details, and response expectations.
 5. Prepare a launch checklist for content QA, mobile QA, and contact-flow testing.

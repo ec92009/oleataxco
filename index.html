@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=49.3" />
+  <link rel="stylesheet" href="assets/styles.css?v=80.0" />
   <style>
     .bg-brand{position:fixed;inset:0;pointer-events:none;z-index:0;background:url('./assets/logos/oleatax-logo.png') center 18vh / min(58vmin,520px) no-repeat;opacity:.16;filter:drop-shadow(0 18px 40px rgba(0,0,0,.22));}
     body > *{position:relative;z-index:1;}
@@ -28,7 +28,7 @@
           <p class="brand-meta">Strategic CPA advisory for business owners, real estate investors, and high-income families</p>
         </div>
         <div class="topbar-controls">
-          <span class="build-version" aria-label="Build version">v49.3</span>
+          <span class="build-version" aria-label="Build version">v80.0</span>
           <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"></button>
         </div>
       </div>
@@ -37,7 +37,7 @@
         <a href="#who">About Kelly</a>
         <a href="#process">Process</a>
         <a href="#faqs">FAQs</a>
-        <a class="button topbar-cta" href="#book-call">Book a Call</a>
+        <a class="button topbar-cta" href="#inquiry">Start an Inquiry</a>
       </nav>
     </header>
 
@@ -54,7 +54,7 @@
           Tax is not a once-a-year event. Olea Tax Co. helps you make better decisions year-round with proactive planning, cleaner structure, and fewer surprises at filing time.
         </p>
         <div class="cta-row">
-          <a class="button hero-primary" href="#book-call">Book a Call</a>
+          <a class="button hero-primary" href="#inquiry">Start an Inquiry</a>
           <a class="button alt" href="#services">See Services</a>
         </div>
       </div>
@@ -188,41 +188,42 @@
       <section class="section panel span-12">
         <h2>Is this the right fit?</h2>
         <p>This model is best for clients who want an ongoing strategic relationship, not one-off transactional filing only.</p>
-        <p>If that is what you want, start with a strategy call and we will map the right next step.</p>
+        <p>If that is what you want, start with a short async inquiry and we will map the right next step.</p>
         <p class="small">Boutique model: limited client slots to protect quality and response time.</p>
       </section>
     </section>
 
-    <section id="book-call" class="section panel">
-      <h2>Book a strategy call</h2>
+    <section id="inquiry" class="section panel">
+      <h2>Start an async inquiry</h2>
       <div class="book-call-grid">
         <div class="card">
           <p>
-            Choose a time for a 20-minute intro call. We'll discuss your goals, current setup, and whether Olea Tax Co. is the right strategic fit.
+            Send a short note about your goals, current setup, and timing. Kelly will review it first, then recommend the best next step.
           </p>
           <ul>
-            <li>Fast intake call</li>
-            <li>Clear next steps afterward</li>
-            <li>No obligation to proceed</li>
+            <li>Best for thoughtful, non-urgent questions</li>
+            <li>No need to coordinate calendars upfront</li>
+            <li>Calls are scheduled only when they are useful</li>
           </ul>
         </div>
-        <div class="calendar-embed" aria-label="Booking calendar">
-          <form class="booking-form" action="#" method="post" onsubmit="return false;">
-            <div class="booking-row">
-              <label for="call-date">Pick a date</label>
-              <input id="call-date" name="call_date" type="date" />
+        <div class="async-contact" aria-label="Async contact options">
+          <div class="channel-list">
+            <div class="channel-card">
+              <h3>Email</h3>
+              <p>Use email for the first inquiry and any follow-up that may include context or attachments.</p>
+              <a class="button" href="mailto:hello@oleataxco.com?subject=Olea%20Tax%20Co.%20inquiry">Send an Email</a>
             </div>
-            <div class="booking-row">
-              <label for="call-time">Pick a start time (30-minute increments)</label>
-              <select id="call-time" name="call_time" required>
-                <option value="">Select a time</option>
-              </select>
+            <div class="channel-card">
+              <h3>Professional DMs</h3>
+              <p>LinkedIn or Instagram can work well for a quick introduction before moving details to email.</p>
+              <p class="small">DM links can be added here once the official profiles are live.</p>
             </div>
-            <div class="booking-row">
-              <button type="button" class="button">Reserve a Slot</button>
+            <div class="channel-card">
+              <h3>Secure next step</h3>
+              <p>Tax documents and sensitive financial details should move through secure sharing, not social DMs.</p>
             </div>
-            <p class="small">Available window shown: 10:00 AM to 4:00 PM.</p>
-          </form>
+          </div>
+          <p class="response-note">A short summary is enough to begin: entity type, tax year, main concern, and whether you need filing, planning, or both.</p>
         </div>
       </div>
     </section>
@@ -238,48 +239,13 @@
 
     <section id="contact" class="section panel">
       <h2>Get in touch</h2>
-      <p>Ready to take a more strategic approach to your taxes? Reach out directly or book a call to get started.</p>
+      <p>Ready to take a more strategic approach to your taxes? Send a short note to get started asynchronously.</p>
       <div class="cta-row">
-        <a class="button" href="mailto:hello@oleataxco.com">Send a Message</a>
-        <a class="button alt" href="#book-call">Book a Call</a>
+        <a class="button" href="mailto:hello@oleataxco.com?subject=Olea%20Tax%20Co.%20inquiry">Send an Email</a>
+        <a class="button alt" href="#inquiry">See Inquiry Options</a>
       </div>
     </section>
   </main>
-  <script>
-    (function () {
-      var dateInput = document.getElementById("call-date");
-      var timeSelect = document.getElementById("call-time");
-      if (!dateInput || !timeSelect) return;
-
-      var today = new Date();
-      var yyyy = today.getFullYear();
-      var mm = String(today.getMonth() + 1).padStart(2, "0");
-      var dd = String(today.getDate()).padStart(2, "0");
-      dateInput.min = yyyy + "-" + mm + "-" + dd;
-      dateInput.value = dateInput.min;
-
-      var startHour = 10;
-      var endHour = 16;
-
-      function toLabel(hours24, minutes) {
-        var suffix = hours24 >= 12 ? "PM" : "AM";
-        var hour12 = hours24 % 12;
-        if (hour12 === 0) hour12 = 12;
-        return hour12 + ":" + String(minutes).padStart(2, "0") + " " + suffix;
-      }
-
-      for (var h = startHour; h <= endHour; h++) {
-        for (var m = 0; m <= 30; m += 30) {
-          if (h === endHour && m > 0) continue;
-          var value = String(h).padStart(2, "0") + ":" + String(m).padStart(2, "0");
-          var option = document.createElement("option");
-          option.value = value;
-          option.textContent = toLabel(h, m);
-          timeSelect.appendChild(option);
-        }
-      }
-    })();
-  </script>
-  <script src="assets/theme-toggle.js?v=49.3"></script>
+  <script src="assets/theme-toggle.js?v=80.0"></script>
 </body>
 </html>

@@ -37,7 +37,7 @@ Open `http://localhost:8000/preview.html`
 - Main draft site: `index.html`
 - Design preview: `preview.html`
 - Theme/script assets: `assets/`
-- Includes a `Book a Call` placeholder section with local date/time controls
+- Includes a `Start an Inquiry` section focused on async email/DM intake
 
 ## Founder Photo
 
@@ -54,11 +54,12 @@ All versions include the same top banner text:
 - `MOCK DRAFT`
 - `Internal review only. Content, pricing, and visuals are placeholders for team feedback.`
 
-## Scheduling Placeholder
+## Async Intake
 
-The booking section provides local placeholder controls:
+The primary conversion path is async-first:
 
-- Date picker
-- Time options from 10:00 AM to 4:00 PM in 30-minute increments
+- Email inquiry button with a prefilled subject
+- Professional DM guidance for quick introductions
+- Clear note that sensitive financial documents should move through secure sharing
 
-No external service is connected yet. Replace this with the final scheduling provider when ready.
+Direct scheduling should be added only when Kelly wants calls to be available as a primary channel.

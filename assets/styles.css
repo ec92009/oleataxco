@@ -459,39 +459,44 @@ a.button.alt:active {
   gap: 1rem;
   align-items: stretch;
 }
-.calendar-embed {
+.async-contact {
   border: 1px solid color-mix(in srgb, var(--line) 52%, transparent);
   border-radius: 20px;
   overflow: auto;
   background: color-mix(in srgb, var(--surface-2) 92%, white 8%);
-}
-.booking-form {
-  display: grid;
-  gap: 0.8rem;
   padding: 1rem;
 }
-.booking-row {
+
+.channel-list {
   display: grid;
-  gap: 0.35rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
 }
-.booking-row label {
-  font-weight: 700;
-  color: var(--text);
+
+.channel-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 100%;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--line) 48%, transparent);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--surface-1) 78%, var(--surface-2) 22%);
 }
-.booking-row input,
-.booking-row select {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--surface-1);
-  color: var(--text);
-  padding: 0.65rem 0.7rem;
-  font: inherit;
+
+.channel-card h3,
+.channel-card p {
+  margin: 0;
 }
-.booking-row input:focus-visible,
-.booking-row select:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+
+.channel-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.response-note {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
 }
 .book-call-note {
   margin-top: 0.7rem;
@@ -615,7 +620,8 @@ a.button.alt:active {
   }
   .cards.cols-3,
   .cards.cols-4,
-  .book-call-grid {
+  .book-call-grid,
+  .channel-list {
     grid-template-columns: 1fr;
   }
 }
