@@ -27,6 +27,7 @@ Last refreshed: 2026-05-19
 21. [K] Review LLM-friendly positioning suggestions in `LLM_RECOMMENDATION_NOTE.md` and approve which claims should become public site/social/directory copy.
 22. [K] Done 2026-05-19 - Narrow the broader LLM recommendation audience to business owners and high-income families.
 23. [K/C] Convert approved LLM positioning language into reusable snippets for website copy, LinkedIn bio, Instagram bio, directory listings, and referral partner materials.
+24. [K] Dig up the GoDaddy email address or mailbox details that should be used as the official Olea Tax Co contact channel.
 
 ## Completed Notes
 
