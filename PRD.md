@@ -171,7 +171,7 @@ Future optional pages:
 ### 12.8 FAQ section
 
 - Answer high-friction questions before contact
-- Prioritize remote service, catch-up work, one-time services, and fit
+- Prioritize remote service, bookkeeping boundaries, one-time services, and fit
 
 ### 12.9 Contact section
 
