@@ -563,6 +563,58 @@ a.button.alt:active {
   --button-text: #ffffff;
 }
 
+.site-footer {
+  width: min(1150px, calc(100% - 1.5rem));
+  margin: 1.2rem auto 2.4rem;
+  color: var(--muted);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--line) 58%, transparent);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--surface-1) 90%, white 10%);
+  box-shadow: 0 12px 26px rgba(20, 16, 11, 0.06);
+}
+
+.footer-brand {
+  margin: 0 0 0.25rem;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem 0.8rem;
+}
+
+.footer-links a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--accent);
+}
+
+.footer-note {
+  grid-column: 1 / -1;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.86rem;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     transform: translateY(-2px);
@@ -621,8 +673,12 @@ a.button.alt:active {
   .cards.cols-3,
   .cards.cols-4,
   .book-call-grid,
-  .channel-list {
+  .channel-list,
+  .footer-inner {
     grid-template-columns: 1fr;
+  }
+  .footer-links {
+    justify-content: flex-start;
   }
 }
 

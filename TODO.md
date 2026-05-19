@@ -5,10 +5,10 @@ Last refreshed: 2026-05-19
 ## Numbered Backlog
 
 1. [K/E/C] Finalize the async intake system and channel policy.
-2. [C] Add production SEO foundations: title/description, canonical, Open Graph, Twitter card, sitemap, robots, and schema.
+2. [C] Done 2026-05-19 - Add production SEO foundations: title/description, canonical, Open Graph, Twitter card, sitemap, robots, and schema.
 3. [K/E] Add a privacy/disclaimer layer suitable for a CPA lead-generation site.
 4. [K/E] Finalize contact identity: official email, service area, optional phone policy, and social profile URLs.
-5. [C] Add a footer with legal/contact basics, social links, version, and privacy link.
+5. [C] Done currently possible 2026-05-19 - Add a footer with legal/contact basics, version, and privacy link. Social links remain pending approved profile URLs in item 11.
 6. [K/C] Improve LLM/search recommendation confidence with explicit credentials, specialties, service boundaries, and entity/person structured data.
 7. [K/C] Create landing pages for high-intent niches: business-owner tax planning and real-estate investor tax planning.
 8. [K/C] Expand FAQs to cover fit, timing, records readiness, no-bookkeeping boundary, remote workflow, and one-time versus ongoing support.
@@ -23,7 +23,13 @@ Last refreshed: 2026-05-19
 17. [E/C] Add analytics for CTA clicks, email clicks, social clicks, scroll depth, and outbound profile links.
 18. [E/C] Submit the site to Google Search Console and Bing Webmaster Tools after sitemap publication.
 19. [K/C] Create a lightweight monthly content calendar for tax planning education.
-20. [C] Set up a recurring review of Webapps hub metadata whenever Olea Tax gets a visible version bump.
+20. [C] Done 2026-05-19 - Set up a recurring review of Webapps hub metadata whenever Olea Tax gets a visible version bump.
+
+## Completed Notes
+
+- Item 2: Added production metadata, canonical URL, Open Graph/Twitter tags, JSON-LD `AccountingService` schema, `robots.txt`, and `sitemap.xml`.
+- Item 5: Added a footer with contact/service/inquiry links, visible version, and a working privacy link. The privacy page is intentionally a placeholder pending the fuller K/E privacy/disclaimer work in item 3. Social profile links remain pending item 11.
+- Item 20: Created the weekly automation `review-olea-tax-webapps-version-sync` to check Olea Tax/Webapps hub version alignment.
 
 ## Item 1 Detail: Finalize Async Intake System And Channel Policy
 
