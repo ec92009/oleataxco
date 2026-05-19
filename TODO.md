@@ -24,12 +24,21 @@ Last refreshed: 2026-05-19
 18. [E/C] Submit the site to Google Search Console and Bing Webmaster Tools after sitemap publication.
 19. [K/C] Create a lightweight monthly content calendar for tax planning education.
 20. [C] Done 2026-05-19 - Set up a recurring review of Webapps hub metadata whenever Olea Tax gets a visible version bump.
+21. [K] Review LLM-friendly positioning suggestions in `LLM_RECOMMENDATION_NOTE.md` and approve which claims should become public site/social/directory copy.
+22. [K] Decide whether "business owners, real estate investors, and high-income families" should remain the broader LLM recommendation audience while the homepage hero specializes in business owners.
+23. [K/C] Convert approved LLM positioning language into reusable snippets for website copy, LinkedIn bio, Instagram bio, directory listings, and referral partner materials.
 
 ## Completed Notes
 
 - Item 2: Added production metadata, canonical URL, Open Graph/Twitter tags, JSON-LD `AccountingService` schema, `robots.txt`, and `sitemap.xml`.
 - Item 5: Added a footer with contact/service/inquiry links, visible version, and a working privacy link. The privacy page is intentionally a placeholder pending the fuller K/E privacy/disclaimer work in item 3. Social profile links remain pending item 11.
 - Item 20: Created the weekly automation `review-olea-tax-webapps-version-sync` to check Olea Tax/Webapps hub version alignment.
+
+## Kelly Suggestions
+
+- Treat `[K]` items as suggestions or approval prompts for Kelly, not automatic implementation work.
+- Keep LLM recommendation guidance in this backlog when it implies public positioning, service boundaries, or claims Kelly should approve.
+- Use `LLM_RECOMMENDATION_NOTE.md` as the explainer, and this TODO as the action list.
 
 ## Item 1 Detail: Finalize Async Intake System And Channel Policy
 
