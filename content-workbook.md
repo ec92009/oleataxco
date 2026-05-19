@@ -2,21 +2,30 @@
 
 Use this to gather content before building in SquareSpace.
 
+Last refreshed: 2026-05-19
+
+Current draft status:
+
+- Draft site version: `v80.7`
+- Primary positioning: strategic CPA advisory for business owners, with high-income families retained as an approved audience in planning docs.
+- Primary intake model: async-first email/DM introduction, followed by fit assessment and secure document handoff where appropriate.
+- Known boundaries: Olea Tax Co. does not provide bookkeeping; sensitive tax or financial documents should not be sent through social DMs.
+
 ## 1. Business Basics
 
 - Domain (already owned): OleaTaxCo.com
-- Business name (exact display name):
-- Tagline (short phrase under logo):
-- Email:
+- Business name (exact display name): Olea Tax Co.
+- Tagline (short phrase under logo): Strategic CPA advisory for business owners
+- Email: `hello@oleataxco.com` is used in the draft; confirm before public launch.
 - Phone:
 - City / service area:
-- Remote services offered? (yes/no):
+- Remote services offered? (yes/no): Draft copy says yes; confirm service area and any licensing/geographic limits.
 
 ## 2. Ideal Clients
 
-- Who does Kelly most want to serve first?
-- Individuals, families, or businesses?
-- If businesses: what size/stage (solo, startup, established local business)?
+- Who does Kelly most want to serve first? Draft prioritizes business owners with increasing tax complexity.
+- Individuals, families, or businesses? Draft homepage prioritizes business owners; planning docs also preserve high-income families as a target audience.
+- If businesses: what size/stage (solo, startup, established local business)? Draft examples include entrepreneurs, multi-entity businesses, and growing founders.
 - What problems do they usually have when they contact a CPA?
 
 ## 3. Services (prioritize top 3)
@@ -61,9 +70,9 @@ Examples:
 
 ## 7. Call to Action (pick one primary)
 
-- Book a consultation
+- Book a consultation: not currently recommended as the default while async-first intake is preferred.
 - Call now
-- Send a message
+- Send a message: current draft primary CTA is `Start an Inquiry` / `Send an Email`.
 - Request a quote
 
 Secondary CTA (optional):

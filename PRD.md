@@ -5,8 +5,10 @@
 - Status: Draft
 - Product: Olea Tax Co website
 - Product type: Marketing and lead-generation site
+- Current draft version: `v80.7`
 - Current preview: `https://ec92009.github.io/oleataxco/`
 - Local workspace: `~/Dev/oleataxco`
+- Last refreshed: 2026-05-19
 
 ## 1. Product Summary
 
@@ -255,4 +257,5 @@ Future optional pages:
 2. Replace all placeholder or draft-only elements with real launch-ready copy and links.
 3. Finalize the async intake stack: email, professional DMs, intake form, secure document-sharing handoff, and optional calls after fit.
 4. Add final trust builders such as credentials, service area details, and response expectations.
-5. Prepare a launch checklist for content QA, mobile QA, and contact-flow testing.
+5. Create high-intent service pages once homepage positioning is approved.
+6. Prepare a launch checklist for content QA, mobile QA, contact-flow testing, and search console submission.

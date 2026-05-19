@@ -9,7 +9,8 @@ Use this folder for Olea Tax Co work only:
 - Single draft homepage: `index.html`
 - Design preview with 3 style options: `preview.html`
 - Shared styles/scripts: `assets/`
-- Planning notes: `content-workbook.md`
+- Planning notes: `content-workbook.md`, `PRD.md`, `TODO.md`
+- Thread handoff notes: `SUMMARY.md`
 
 Do not edit Olea Media Co files from this project thread.
 
@@ -34,10 +35,12 @@ Open `http://localhost:8000/preview.html`
 
 ## Current Build
 
+- Visible version: `v80.7`
 - Main draft site: `index.html`
 - Design preview: `preview.html`
 - Theme/script assets: `assets/`
 - Includes a `Start an Inquiry` section focused on async email/DM intake
+- Includes production SEO foundations, `robots.txt`, `sitemap.xml`, JSON-LD schema, footer, and a placeholder privacy page
 
 ## Founder Photo
 
@@ -63,3 +66,11 @@ The primary conversion path is async-first:
 - Clear note that sensitive financial documents should move through secure sharing
 
 Direct scheduling should be added only when Kelly wants calls to be available as a primary channel.
+
+## Active Docs
+
+- `TODO.md`: numbered active backlog and completed implementation notes
+- `PRD.md`: product requirements for the launch-ready marketing site
+- `content-workbook.md`: open content decisions for Kelly
+- `LLM_RECOMMENDATION_NOTE.md`: plain-language positioning guidance for AI/search summarization
+- `SUMMARY.md`: latest conversation handoff and repo status
