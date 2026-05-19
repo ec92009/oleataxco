@@ -403,6 +403,15 @@ a.button.alt:active {
   color: var(--muted);
 }
 
+.credential-note {
+  padding: 0.72rem 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  color: var(--text);
+  font-weight: 700;
+}
+
 .section-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
