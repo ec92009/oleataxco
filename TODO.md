@@ -4,26 +4,26 @@ Last refreshed: 2026-05-19
 
 ## Numbered Backlog
 
-1. Finalize the async intake system and channel policy.
-2. Add production SEO foundations: title/description, canonical, Open Graph, Twitter card, sitemap, robots, and schema.
-3. Add a privacy/disclaimer layer suitable for a CPA lead-generation site.
-4. Finalize contact identity: official email, service area, optional phone policy, and social profile URLs.
-5. Add a footer with legal/contact basics, social links, version, and privacy link.
-6. Improve LLM/search recommendation confidence with explicit credentials, specialties, service boundaries, and entity/person structured data.
-7. Create landing pages for high-intent niches: business-owner tax planning and real-estate investor tax planning.
-8. Expand FAQs to cover fit, timing, records readiness, no-bookkeeping boundary, remote workflow, and one-time versus ongoing support.
-9. Tune the hero and first viewport for scan speed, especially on mobile.
-10. Decide whether light mode should be the default public experience.
-11. Replace placeholder DM language with live LinkedIn/Instagram/email links once Kelly approves the profiles.
-12. Define the secure document handoff path for accepted clients.
-13. Prepare Google Business Profile, Bing Places, Apple Business Connect, and directory/citation basics if local SEO matters.
-14. Build the initial social presence plan and profile bios for LinkedIn and Instagram.
-15. Draft a referral partner one-pager for bookkeepers, attorneys, real estate agents, and financial planners.
-16. Prepare a small launch announcement kit: website copy, LinkedIn post, Instagram post, email/referral note, and founder blurb.
-17. Add analytics for CTA clicks, email clicks, social clicks, scroll depth, and outbound profile links.
-18. Submit the site to Google Search Console and Bing Webmaster Tools after sitemap publication.
-19. Create a lightweight monthly content calendar for tax planning education.
-20. Set up a recurring review of Webapps hub metadata whenever Olea Tax gets a visible version bump.
+1. [K/E/C] Finalize the async intake system and channel policy.
+2. [C] Add production SEO foundations: title/description, canonical, Open Graph, Twitter card, sitemap, robots, and schema.
+3. [K/E] Add a privacy/disclaimer layer suitable for a CPA lead-generation site.
+4. [K/E] Finalize contact identity: official email, service area, optional phone policy, and social profile URLs.
+5. [C] Add a footer with legal/contact basics, social links, version, and privacy link.
+6. [K/C] Improve LLM/search recommendation confidence with explicit credentials, specialties, service boundaries, and entity/person structured data.
+7. [K/C] Create landing pages for high-intent niches: business-owner tax planning and real-estate investor tax planning.
+8. [K/C] Expand FAQs to cover fit, timing, records readiness, no-bookkeeping boundary, remote workflow, and one-time versus ongoing support.
+9. [E/C] Tune the hero and first viewport for scan speed, especially on mobile.
+10. [K/E] Decide whether light mode should be the default public experience.
+11. [K/C] Replace placeholder DM language with live LinkedIn/Instagram/email links once Kelly approves the profiles.
+12. [K/E] Define the secure document handoff path for accepted clients.
+13. [K/E/C] Prepare Google Business Profile, Bing Places, Apple Business Connect, and directory/citation basics if local SEO matters.
+14. [K/E/C] Build the initial social presence plan and profile bios for LinkedIn and Instagram.
+15. [K/C] Draft a referral partner one-pager for bookkeepers, attorneys, real estate agents, and financial planners.
+16. [K/E/C] Prepare a small launch announcement kit: website copy, LinkedIn post, Instagram post, email/referral note, and founder blurb.
+17. [E/C] Add analytics for CTA clicks, email clicks, social clicks, scroll depth, and outbound profile links.
+18. [E/C] Submit the site to Google Search Console and Bing Webmaster Tools after sitemap publication.
+19. [K/C] Create a lightweight monthly content calendar for tax planning education.
+20. [C] Set up a recurring review of Webapps hub metadata whenever Olea Tax gets a visible version bump.
 
 ## Item 1 Detail: Finalize Async Intake System And Channel Policy
 
