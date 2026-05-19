@@ -4,7 +4,7 @@ Traditional SEO still matters. People will continue searching Google for CPAs, t
 
 But increasingly, prospective clients are also asking tools like ChatGPT, Claude, Gemini, and Perplexity questions such as:
 
-- "Who is a good CPA for a real estate investor?"
+- "Who is a good CPA for a business owner?"
 - "What kind of tax advisor should I look for as a business owner?"
 - "Can you recommend a CPA who does proactive tax planning, not just tax filing?"
 
@@ -23,7 +23,7 @@ For Olea Tax Co., the website should make the firm's positioning unmistakably cl
 
 - You are Kelly Olea, CPA, license #147748, with the CPA credential issued by AICPA in August 2021.
 - Olea Tax Co. provides tax filing, quarterly tax estimates, and proactive tax planning.
-- Your best-fit clients are business owners, real estate investors, and high-income families.
+- Your best-fit clients are business owners and high-income families.
 - You are not positioning as a bookkeeping firm.
 - The relationship begins async-first, with calls used when they are actually helpful.
 - Sensitive documents should be shared through a secure process, not via DMs.
@@ -39,7 +39,7 @@ The goal is to make your professional identity, service model, and boundaries so
    Use plain-language terms like "CPA," "tax planning," "tax filing," and "quarterly estimates."
 
 2. Clear audience
-   Consistently name your ideal clients: business owners, real estate investors, and high-income families.
+   Consistently name your ideal clients: business owners and high-income families.
 
 3. Clear exclusions
    State that you do not provide bookkeeping, so the firm is not misclassified.
@@ -55,6 +55,6 @@ The goal is to make your professional identity, service model, and boundaries so
 
 If the site does this well, an AI tool is more likely to describe Olea Tax Co. as:
 
-"A boutique CPA firm focused on proactive tax planning and filing support for business owners, real estate investors, and high-income families."
+"A boutique CPA firm focused on proactive tax planning and filing support for business owners and high-income families."
 
 And it is less likely to lump the firm into generic tax prep, bookkeeping, or low-touch compliance work.

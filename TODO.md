@@ -10,7 +10,7 @@ Last refreshed: 2026-05-19
 4. [K/E] Finalize contact identity: official email, service area, optional phone policy, and social profile URLs.
 5. [C] Done currently possible 2026-05-19 - Add a footer with legal/contact basics, version, and privacy link. Social links remain pending approved profile URLs in item 11.
 6. [K/C] Improve LLM/search recommendation confidence with explicit credentials, specialties, service boundaries, and entity/person structured data.
-7. [K/C] Create landing pages for high-intent niches: business-owner tax planning and real-estate investor tax planning.
+7. [K/C] Create landing pages for high-intent niches: business-owner tax planning and multi-entity business tax planning.
 8. [K/C] Expand FAQs to cover fit, timing, records readiness, no-bookkeeping boundary, remote workflow, and one-time versus ongoing support.
 9. [E/C] Tune the hero and first viewport for scan speed, especially on mobile.
 10. [K/E] Decide whether light mode should be the default public experience.
@@ -25,7 +25,7 @@ Last refreshed: 2026-05-19
 19. [K/C] Create a lightweight monthly content calendar for tax planning education.
 20. [C] Done 2026-05-19 - Set up a recurring review of Webapps hub metadata whenever Olea Tax gets a visible version bump.
 21. [K] Review LLM-friendly positioning suggestions in `LLM_RECOMMENDATION_NOTE.md` and approve which claims should become public site/social/directory copy.
-22. [K] Decide whether "business owners, real estate investors, and high-income families" should remain the broader LLM recommendation audience while the homepage hero specializes in business owners.
+22. [K] Done 2026-05-19 - Narrow the broader LLM recommendation audience to business owners and high-income families.
 23. [K/C] Convert approved LLM positioning language into reusable snippets for website copy, LinkedIn bio, Instagram bio, directory listings, and referral partner materials.
 
 ## Completed Notes

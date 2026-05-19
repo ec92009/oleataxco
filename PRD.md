@@ -10,7 +10,7 @@
 
 ## 1. Product Summary
 
-Olea Tax Co needs a professional website that positions the firm as a strategic CPA partner for business owners, real estate investors, and high-income families. The website should communicate that the firm offers proactive tax planning, not just annual filing, and should convert qualified visitors into consultation requests.
+Olea Tax Co needs a professional website that positions the firm as a strategic CPA partner for business owners and high-income families. The website should communicate that the firm offers proactive tax planning, not just annual filing, and should convert qualified visitors into consultation requests.
 
 The current site is a draft marketing homepage with async-first inquiry copy and draft content. This PRD defines the requirements for a production-ready website that can launch publicly on a simple stack first and later move into SquareSpace or another CMS if needed.
 
@@ -41,7 +41,7 @@ The current draft site does a reasonable job of introducing the offer, but it st
 ### Primary audience
 
 - Business owners with increasing tax complexity
-- Real estate investors with growing portfolios or entity structures
+- Business owners with multi-entity or increasingly complex tax situations
 - High-income families needing coordinated tax strategy
 
 ### Secondary audience
@@ -61,7 +61,7 @@ The current draft site does a reasonable job of introducing the offer, but it st
 
 ## 7. Value Proposition
 
-Olea Tax Co helps business owners, investors, and high-income households make better tax decisions year-round through proactive planning, direct advisory access, and structured execution.
+Olea Tax Co helps business owners and high-income households make better tax decisions year-round through proactive planning, direct advisory access, and structured execution.
 
 ## 8. Positioning
 
