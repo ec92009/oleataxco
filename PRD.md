@@ -8,13 +8,15 @@
 - Current draft version: `v80.7`
 - Current preview: `https://ec92009.github.io/oleataxco/`
 - Local workspace: `~/Dev/oleataxco`
-- Last refreshed: 2026-05-19
+- Last refreshed: 2026-05-31
 
 ## 1. Product Summary
 
 Olea Tax Co needs a professional website that positions the firm as a strategic CPA partner for business owners and high-income families. The website should communicate that the firm offers proactive tax planning, not just annual filing, and should convert qualified visitors into consultation requests.
 
 The current site is a draft marketing homepage with async-first inquiry copy and draft content. This PRD defines the requirements for a production-ready website that can launch publicly on a simple stack first and later move into SquareSpace or another CMS if needed.
+
+Confirmed production domain: `oleataxco.com`.
 
 ## 2. Problem
 

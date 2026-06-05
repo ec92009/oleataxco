@@ -21,7 +21,7 @@ These tools do not evaluate a website exactly like a traditional search engine. 
 
 For Olea Tax Co., the website should make the firm's positioning unmistakably clear:
 
-- You are Kelly Olea, CPA, license #147748, with the CPA credential issued by AICPA in August 2021.
+- You are Kelly Olea, CPA, license #147748, with the CPA credential issued by the American Institute of Certified Public Accountants in August 2021.
 - Olea Tax Co. provides tax filing, quarterly tax estimates, and proactive tax planning.
 - Your best-fit clients are business owners and high-income families.
 - You are not positioning as a bookkeeping firm.

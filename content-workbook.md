@@ -2,7 +2,7 @@
 
 Use this to gather content before building in SquareSpace.
 
-Last refreshed: 2026-05-19
+Last refreshed: 2026-05-31
 
 Current draft status:
 
@@ -13,7 +13,7 @@ Current draft status:
 
 ## 1. Business Basics
 
-- Domain (already owned): OleaTaxCo.com
+- Domain (confirmed by Kelly): oleataxco.com
 - Business name (exact display name): Olea Tax Co.
 - Tagline (short phrase under logo): Strategic CPA advisory for business owners
 - Email: `hello@oleataxco.com` is used in the draft; confirm before public launch.

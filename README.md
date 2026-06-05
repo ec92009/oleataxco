@@ -11,6 +11,7 @@ Use this folder for Olea Tax Co work only:
 - Shared styles/scripts: `assets/`
 - Planning notes: `content-workbook.md`, `PRD.md`, `TODO.md`
 - Thread handoff notes: `SUMMARY.md`
+- Private booking prototype: `cloudflare-booking/`
 
 Do not edit Olea Media Co files from this project thread.
 
@@ -66,6 +67,12 @@ The primary conversion path is async-first:
 - Clear note that sensitive financial documents should move through secure sharing
 
 Direct scheduling should be added only when Kelly wants calls to be available as a primary channel.
+
+## Booking Prototype
+
+`cloudflare-booking/` contains a private Kelly-first Cloudflare booking prototype
+using custom availability storage in D1. It is intentionally separate from the
+current public draft homepage and from Magali's existing scheduling extension.
 
 ## Active Docs
 

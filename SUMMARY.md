@@ -1,10 +1,12 @@
 # Olea Tax Co Conversation Summary
 
-Last updated: 2026-05-19
+Last updated: 2026-05-31
 
 ## Current Request
 
-The user asked to refresh docs, summarize the conversation to `SUMMARY.md`, commit, push, and then show a fresh numbered backlog.
+The user asked to start down the Kelly-first Cloudflare booking backlog and chose custom availability storage for the calendar backend direction.
+
+Latest update: Kelly confirmed the production domain name is `oleataxco.com`.
 
 ## Repo Instructions In Force
 
@@ -21,6 +23,8 @@ The user asked to refresh docs, summarize the conversation to `SUMMARY.md`, comm
 - Main draft site: `index.html`.
 - Design preview: `preview.html`.
 - Placeholder privacy page: `privacy.html`.
+- Cloudflare booking prototype: `cloudflare-booking/`.
+- Confirmed production domain: `oleataxco.com`.
 - Shared styles/scripts: `assets/`.
 - Active planning docs: `README.md`, `PRD.md`, `TODO.md`, `content-workbook.md`, `LLM_RECOMMENDATION_NOTE.md`.
 - Archived pod-model variant: `v25/index.html`; treat as read-only unless explicitly asked to edit.
@@ -31,6 +35,9 @@ Olea Tax Co is positioned as a boutique strategic CPA advisory firm for business
 
 ## Key Open Decisions
 
+- Kelly's real availability windows, first bookable service names, durations, and buffers.
+- Whether booking requests are always manual approval or can later be auto-confirmed.
+- Email notification sender/recipient setup for pending booking requests.
 - Confirm whether `hello@oleataxco.com` is the official public inbox.
 - Decide which DM channels, if any, should be public at launch.
 - Decide whether a short intake form is needed.
@@ -40,8 +47,14 @@ Olea Tax Co is positioned as a boutique strategic CPA advisory firm for business
 
 ## Work Completed In This Pass
 
-- Bumped visible draft version from `v80.6` to `v80.7`.
-- Updated CSS/JS cache-bust query strings in active HTML files.
-- Refreshed `README.md`, `PRD.md`, `content-workbook.md`, and `TODO.md`.
-- Rebuilt `TODO.md` into a cleaner active numbered backlog with completed work separated.
-- Added this `SUMMARY.md` handoff file.
+- Added `cloudflare-booking/` as a private booking prototype track.
+- Added a Cloudflare Worker API skeleton for health, site config, slot lookup, and pending booking creation.
+- Added a D1 schema for sites, services, availability rules, blackout dates, and bookings.
+- Added Kelly seed data for one manually approved `intro-fit-call` service.
+- Refreshed `TODO.md` so the numbered backlog starts with validating the custom booking prototype.
+- Recorded `oleataxco.com` as the confirmed production domain in planning docs; no live domain/canonical/DNS changes made.
+
+## Latest Validation
+
+- `node --check cloudflare-booking/src/index.js` should be run after any Worker changes.
+- Wrangler/D1 local runtime still needs to be run for end-to-end API validation.
