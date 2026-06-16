@@ -1,8 +1,8 @@
 # Olea Tax Co Backlog
 
-Last refreshed: 2026-05-31
+Last refreshed: 2026-06-17
 
-Current visible version: `v80.7`
+Current visible version: `v109.1`
 
 ## Numbered Backlog
 
@@ -13,7 +13,7 @@ Current visible version: `v80.7`
 5. [E/C] Add email notifications for new pending booking requests.
 6. [E/C] Define the Magali config shape without changing Magali's current scheduling extension.
 7. [K/E/C] Finalize the async intake system and channel policy: approved email, DM channels, response expectation, intake form decision, and when calls are offered.
-8. [K/E] Replace the placeholder privacy page with a CPA-appropriate privacy/disclaimer layer.
+8. [K/E] Review the baseline Privacy, Terms, and Data Deletion pages before final public launch.
 9. [K/E] Confirm public contact identity: official email, phone policy, service area, and approved social profile URLs.
 10. [E/C] Prepare the domain cutover checklist for `oleataxco.com` without changing DNS/live settings yet.
 11. [K/C] Replace placeholder DM language with live LinkedIn, Instagram, and/or email links once Kelly approves the profiles.
@@ -38,6 +38,7 @@ Current visible version: `v80.7`
 
 - 2026-05-29: Started the Kelly-first Cloudflare booking prototype in `cloudflare-booking/` with a Worker API skeleton, D1 schema, and Kelly seed data. Backend direction is custom availability storage, not Calendly/Acuity/Squarespace Scheduling.
 - 2026-05-31: Kelly confirmed the production domain as `oleataxco.com`; docs updated without changing live canonical, sitemap, DNS, or publishing settings.
+- 2026-06-17: Upgraded the main static site to `v109.1` with scoped Liquid Glass styling, a gear settings modal, sequential reveals, mobile sticky inquiry CTA, and baseline Privacy, Terms, and Data Deletion pages.
 - 2026-05-19: Added production metadata, canonical URL, Open Graph/Twitter tags, JSON-LD `AccountingService` schema, `robots.txt`, and `sitemap.xml`.
 - 2026-05-19: Added a footer with contact/service/inquiry links, visible version, and a working privacy link. Social profile links remain pending approved URLs.
 - 2026-05-19: Created the weekly automation `review-olea-tax-webapps-version-sync` to check Olea Tax/Webapps hub version alignment.

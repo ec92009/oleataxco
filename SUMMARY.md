@@ -1,12 +1,12 @@
 # Olea Tax Co Conversation Summary
 
-Last updated: 2026-05-31
+Last updated: 2026-06-17
 
 ## Current Request
 
-The user asked to start down the Kelly-first Cloudflare booking backlog and chose custom availability storage for the calendar backend direction.
+The latest request was to upgrade the static site using the `elies-websites` skill.
 
-Latest update: Kelly confirmed the production domain name is `oleataxco.com`.
+Latest update: the main draft site is now `v109.1` with scoped Liquid Glass styling, a consolidated settings gear, mobile sticky inquiry CTA, and baseline policy pages.
 
 ## Repo Instructions In Force
 
@@ -15,14 +15,14 @@ Latest update: Kelly confirmed the production domain name is `oleataxco.com`.
 - Make small, direct edits.
 - Keep `main` pushable by default.
 - Use commit messages prefixed with `oleataxco:`.
-- For visible site changes, bump the version badge and shared asset cache-bust query strings.
+- For visible site changes, bump the visible settings/About version and shared asset cache-bust query strings.
 - Current version scheme sets `X` to days since 2026-02-28 and increments `Y` per same-day build.
 
 ## Current Project State
 
 - Main draft site: `index.html`.
 - Design preview: `preview.html`.
-- Placeholder privacy page: `privacy.html`.
+- Policy pages: `privacy.html`, `terms.html`, and `data-deletion.html`.
 - Cloudflare booking prototype: `cloudflare-booking/`.
 - Confirmed production domain: `oleataxco.com`.
 - Shared styles/scripts: `assets/`.
@@ -43,18 +43,18 @@ Olea Tax Co is positioned as a boutique strategic CPA advisory firm for business
 - Decide whether a short intake form is needed.
 - Define response-time expectations.
 - Define the secure document-sharing path for accepted clients.
-- Replace the placeholder privacy page with final CPA-appropriate privacy/disclaimer copy.
+- Review the baseline policy pages with Kelly and qualified counsel before final launch.
 
 ## Work Completed In This Pass
 
-- Added `cloudflare-booking/` as a private booking prototype track.
-- Added a Cloudflare Worker API skeleton for health, site config, slot lookup, and pending booking creation.
-- Added a D1 schema for sites, services, availability rules, blackout dates, and bookings.
-- Added Kelly seed data for one manually approved `intro-fit-call` service.
-- Refreshed `TODO.md` so the numbered backlog starts with validating the custom booking prototype.
-- Recorded `oleataxco.com` as the confirmed production domain in planning docs; no live domain/canonical/DNS changes made.
+- Upgraded the main draft homepage with scoped `assets/liquid-glass.css` and `assets/site-settings.js`.
+- Replaced topbar theme/version controls with a settings gear that exposes About/version, language preference, day/night theme, transparency, and translucency.
+- Added sequential card reveals, hover/tap polish, and a mobile sticky inquiry CTA.
+- Added baseline Privacy Policy content.
+- Added `terms.html` and `data-deletion.html`, linked from the footer and sitemap.
+- Bumped active site/docs version references to `v109.1`.
 
 ## Latest Validation
 
-- `node --check cloudflare-booking/src/index.js` should be run after any Worker changes.
-- Wrangler/D1 local runtime still needs to be run for end-to-end API validation.
+- `node --check assets/site-settings.js` passed for the static-site settings script.
+- Run the local static server and browser check after site-surface changes.

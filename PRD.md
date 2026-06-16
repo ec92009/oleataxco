@@ -5,10 +5,10 @@
 - Status: Draft
 - Product: Olea Tax Co website
 - Product type: Marketing and lead-generation site
-- Current draft version: `v80.7`
+- Current draft version: `v109.1`
 - Current preview: `https://ec92009.github.io/oleataxco/`
 - Local workspace: `~/Dev/oleataxco`
-- Last refreshed: 2026-05-31
+- Last refreshed: 2026-06-17
 
 ## 1. Product Summary
 

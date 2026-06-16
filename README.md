@@ -32,16 +32,17 @@ cd ~/Dev/oleataxco
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/preview.html`
+Open `http://localhost:8000/` for the main draft or `http://localhost:8000/preview.html` for the older design chooser.
 
 ## Current Build
 
-- Visible version: `v80.7`
+- Visible version: `v109.1`
 - Main draft site: `index.html`
 - Design preview: `preview.html`
-- Theme/script assets: `assets/`
+- Theme, settings, and glass-effect assets: `assets/`
 - Includes a `Start an Inquiry` section focused on async email/DM intake
-- Includes production SEO foundations, `robots.txt`, `sitemap.xml`, JSON-LD schema, footer, and a placeholder privacy page
+- Includes production SEO foundations, `robots.txt`, `sitemap.xml`, JSON-LD schema, footer, and baseline Privacy, Terms, and Data Deletion pages
+- Includes a gear settings modal with version, language preference, day/night theme, transparency, and translucency controls
 
 ## Founder Photo
 
@@ -51,12 +52,9 @@ The current site uses this founder photo path:
 
 Add/replace that file to update the photo on the live draft homepage.
 
-## Draft Disclaimer
+## Draft Status
 
-All versions include the same top banner text:
-
-- `MOCK DRAFT`
-- `Internal review only. Content, pricing, and visuals are placeholders for team feedback.`
+The static site is still a draft review surface. Policy text, service boundaries, and public contact details should be reviewed before final launch.
 
 ## Async Intake
 
