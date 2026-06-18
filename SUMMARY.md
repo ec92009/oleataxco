@@ -1,12 +1,12 @@
 # Olea Tax Co Conversation Summary
 
-Last updated: 2026-06-17
+Last updated: 2026-06-18
 
 ## Current Request
 
-The latest request was to upgrade the static site using the `elies-websites` skill.
+The latest request is to prepare the repo for handoff to David from Max.
 
-Latest update: the main draft site is now `v109.1` with scoped Liquid Glass styling, a consolidated settings gear, mobile sticky inquiry CTA, and baseline policy pages.
+Latest site update: the main draft site remains `v109.1` with scoped Liquid Glass styling, a consolidated settings gear, mobile sticky inquiry CTA, and baseline policy pages. No visible site files changed during this handoff pass, so no version bump is needed.
 
 ## Repo Instructions In Force
 
@@ -28,6 +28,7 @@ Latest update: the main draft site is now `v109.1` with scoped Liquid Glass styl
 - Shared styles/scripts: `assets/`.
 - Active planning docs: `README.md`, `PRD.md`, `TODO.md`, `content-workbook.md`, `LLM_RECOMMENDATION_NOTE.md`.
 - Archived pod-model variant: `v25/index.html`; treat as read-only unless explicitly asked to edit.
+- Central ticket: `OLEATAXCO-20260617-B583` tracks the completed `v109.1` Liquid Glass/settings upgrade.
 
 ## Current Positioning
 
@@ -47,6 +48,13 @@ Olea Tax Co is positioned as a boutique strategic CPA advisory firm for business
 
 ## Work Completed In This Pass
 
+- Prepared David handoff notes from Max.
+- Preserved the current `v109.1` site state without changing public HTML/CSS/JS assets.
+- Included the existing repo-instruction cleanup in `AGENTS.md`: the parent instruction now points to `~/Dev/AGENTS.md` only.
+- Confirmed the central Tickets API is reachable on David over Tailscale and found `OLEATAXCO-20260617-B583` for the completed static-site upgrade.
+
+## Previous Site Upgrade Pass
+
 - Upgraded the main draft homepage with scoped `assets/liquid-glass.css` and `assets/site-settings.js`.
 - Replaced topbar theme/version controls with a settings gear that exposes About/version, language preference, day/night theme, transparency, and translucency.
 - Added sequential card reveals, hover/tap polish, and a mobile sticky inquiry CTA.
@@ -57,4 +65,5 @@ Olea Tax Co is positioned as a boutique strategic CPA advisory firm for business
 ## Latest Validation
 
 - `node --check assets/site-settings.js` passed for the static-site settings script.
-- Run the local static server and browser check after site-surface changes.
+- `git fetch origin` confirmed local `main` is based on current `origin/main` before the handoff commit.
+- Run the local static server and browser check after future site-surface changes.
