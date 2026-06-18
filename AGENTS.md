@@ -1,4 +1,4 @@
-Before making changes, also read parent instruction file `~/Dev/AGENTS.md` if it exists, then apply this repo file last.
+Before starting work, also read parent instruction file `~/Dev/AGENTS.md` if it exists, then apply this repo file last.
 
 # AGENTS.md
 
@@ -7,7 +7,7 @@ Repo-level working preferences for `~/Dev/oleataxco`.
 ## Response Protocol
 
 - If a task may take more than a few seconds, send a short acknowledgment before doing the work.
-- Read and follow this file before making changes.
+- Read and follow this file before starting work.
 - For changes intended to be viewed externally, commit and push once complete unless the user asks not to.
 
 ## Defaults
