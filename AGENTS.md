@@ -16,12 +16,7 @@ Repo-level working preferences for `~/Dev/oleataxco`.
 
 ## Versioning
 
-- Use visible app versions in the form `vX.Y`.
-- `X` is the number of days since `2026-02-28`.
-- `Y` increments with each build/change on that same day.
-- Always bump `Y` for each new build on the same day.
-- Update any version badge visible in the UI.
-- Also bump CSS/JS cache-bust query strings (`?v=X.Y`) in every HTML file.
+- Follow `~/Dev/.SOPs/VERSIONING_SOP.md`.
 
 ## Workspace Structure
 
