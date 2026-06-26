@@ -4,26 +4,15 @@ Before starting work, also read parent instruction file `~/Dev/AGENTS.md` if it 
 
 Repo-level working preferences for `~/Dev/oleataxco`.
 
-## Response Protocol
-
-- If a task may take more than a few seconds, send a short acknowledgment before doing the work.
-- Read and follow this file before starting work.
-- For changes intended to be viewed externally, commit and push once complete unless the user asks not to.
-
 ## Defaults
 
-- Prefer `rg` and `rg --files` for search.
-- Prefer small, direct edits over broad refactors.
-- Prefer Python for one-off scripts and automation tasks.
 - If Python dependencies are introduced, prefer `uv` for environment and package management.
 
 ## Repo Workflow
 
 - Run commands from the repo root: `~/Dev/oleataxco`.
 - Make small, clear commits with the prefix `oleataxco:`.
-- Default to keeping `main` pushable.
 - Use branches for larger changes; preferred branch prefix: `codex/`.
-- After modifying the site, update docs when needed.
 
 ## Versioning
 
@@ -62,17 +51,9 @@ Repo-level working preferences for `~/Dev/oleataxco`.
 
 ## Execution Discipline
 
-- Prefer deterministic tooling over manual repetition.
 - Before adding new scripts, check whether the repo already contains a file or workflow that solves the task.
-- If a task fails, read the full error, fix the cause, and retest.
-- Keep secrets out of source files.
 
 ## Python Hygiene
 
 - Do not commit virtual environments such as `.venv/`.
 - Do not commit Python cache artifacts such as `__pycache__/` or `*.pyc`.
-
-## Safety
-
-- Do not delete or overwrite user files without explicit confirmation.
-- Do not rewrite Git history unless explicitly requested.
