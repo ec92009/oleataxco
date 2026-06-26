@@ -1,12 +1,12 @@
 # Olea Tax Co Conversation Summary
 
-Last updated: 2026-06-18
+Last updated: 2026-06-26
 
 ## Current Request
 
-The latest request is to prepare the repo for handoff to David from Max.
+The latest request is to republish the main static site after adding the Web-By-Elie.com footer credit.
 
-Latest site update: the main draft site remains `v109.1` with scoped Liquid Glass styling, a consolidated settings gear, mobile sticky inquiry CTA, and baseline policy pages. No visible site files changed during this handoff pass, so no version bump is needed.
+Latest site update: the main draft site is `v118.0` with scoped Liquid Glass styling, a consolidated settings gear, mobile sticky inquiry CTA, baseline policy pages, and a footer credit for Web-By-Elie.com site creation and maintenance.
 
 ## Repo Instructions In Force
 
@@ -48,10 +48,8 @@ Olea Tax Co is positioned as a boutique strategic CPA advisory firm for business
 
 ## Work Completed In This Pass
 
-- Prepared David handoff notes from Max.
-- Preserved the current `v109.1` site state without changing public HTML/CSS/JS assets.
-- Included the existing repo-instruction cleanup in `AGENTS.md`: the parent instruction now points to `~/Dev/AGENTS.md` only.
-- Confirmed the central Tickets API is reachable on David over Tailscale and found `OLEATAXCO-20260617-B583` for the completed static-site upgrade.
+- Added the Web-By-Elie.com footer credit to the main homepage.
+- Bumped active site/docs version references to `v118.0`.
 
 ## Previous Site Upgrade Pass
 

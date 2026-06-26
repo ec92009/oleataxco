@@ -36,7 +36,7 @@ Open `http://localhost:8000/` for the main draft or `http://localhost:8000/previ
 
 ## Current Build
 
-- Visible version: `v109.1`
+- Visible version: `v118.0`
 - Main draft site: `index.html`
 - Design preview: `preview.html`
 - Theme, settings, and glass-effect assets: `assets/`

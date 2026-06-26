@@ -619,9 +619,23 @@ a.button.alt:active {
 
 .footer-note {
   grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
   padding-top: 0.85rem;
   border-top: 1px solid var(--line);
   font-size: 0.86rem;
+}
+
+.footer-note a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-note a:hover,
+.footer-note a:focus-visible {
+  color: var(--accent);
 }
 
 @media (hover: hover) and (pointer: fine) {
