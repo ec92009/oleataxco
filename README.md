@@ -34,6 +34,12 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000/` for the main draft or `http://localhost:8000/preview.html` for the older design chooser.
 
+## GitHub Pages Draft
+
+Live draft: https://ec92009.github.io/oleataxco/
+
+Deployment is handled by `.github/workflows/pages.yml`. The workflow stages only the public website files into `_site` before upload: `index.html`, `preview.html`, policy pages, `robots.txt`, `sitemap.xml`, and `assets/`. Planning docs and the private booking prototype are not served by Pages.
+
 ## Current Build
 
 - Visible version: `v118.0`
