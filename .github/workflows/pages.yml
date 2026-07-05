@@ -24,29 +24,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Stage static site
-        run: |
-          mkdir -p _site
-          cp index.html preview.html privacy.html terms.html data-deletion.html robots.txt sitemap.xml _site/
-          cp -R assets _site/assets
-          touch _site/.nojekyll
-          printf 'oleataxco.com\n' > _site/CNAME
-          python3 - <<'PY'
-          from pathlib import Path
-
-          old_origin = "https://ec92009.github.io/oleataxco"
-          new_origin = "https://oleataxco.com"
-
-          for path in Path("_site").rglob("*"):
-              if path.suffix not in {".html", ".js", ".xml", ".txt"}:
-                  continue
-              text = path.read_text(encoding="utf-8")
-              text = text.replace('data-theme="light"', 'data-theme="dark"')
-              text = text.replace('theme: "light"', 'theme: "dark"')
-              text = text.replace(old_origin + "/", new_origin + "/")
-              text = text.replace(old_origin, new_origin)
-              path.write_text(text, encoding="utf-8")
-          PY
+      - name: Build review artifact
+        env:
+          PUBLIC_ORIGIN: https://ec92009.github.io/oleataxco
+        run: python3 scripts/build_static_site.py
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
