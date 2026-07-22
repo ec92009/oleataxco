@@ -1,8 +1,8 @@
 # Olea Tax Co Backlog
 
-Last refreshed: 2026-07-06
+Last refreshed: 2026-07-22
 
-Current visible version: `v144.2`
+Current visible version: `v144.3`
 
 ## Numbered Backlog
 
@@ -36,6 +36,7 @@ Current visible version: `v144.2`
 
 ## Completed Notes
 
+- 2026-07-22: Enabled Cloudflare Web Analytics automatic setup for `oleataxco.com`, excluded EU visitor measurements, and added legitimate-purpose-only privacy wording in `v144.3`.
 - 2026-07-22: Approved `v144.2` Beyond the Website content upgrades for GitHub and Cloudflare publication: fit facts, fee-factor transparency without invented prices, guided non-sensitive email inquiry, expanded FAQs, and service/FAQ structured data.
 - 2026-07-22: Corrected the production build to preserve the GitHub site's light default theme and released `v144.1` consistently across GitHub Pages and Cloudflare Pages.
 - 2026-07-22: Prepared the `v144.0` production release for GitHub and Cloudflare Pages, with production canonical URLs, sitemap, and crawler metadata for `oleataxco.com`.

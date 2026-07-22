@@ -42,13 +42,14 @@ Deployment is handled by `.github/workflows/pages.yml`. The workflow stages only
 
 ## Current Build
 
-- Visible version: `v144.2`
+- Visible version: `v144.3`
 - Main draft site: `index.html`
 - Design preview: `preview.html`
 - Theme, settings, and glass-effect assets: `assets/`
 - Includes a `Start an Inquiry` section focused on async email/DM intake
 - Includes production SEO foundations, `robots.txt`, `sitemap.xml`, JSON-LD schema, footer, and baseline Privacy, Terms, and Data Deletion pages
 - `v144.2` adds concise fit facts, transparent fee factors, an expanded FAQ schema, and a guided inquiry that prepares a local email without uploading answers
+- `v144.3` enables Cloudflare Web Analytics with EU browser measurements excluded and adds clear purpose-limitation wording to the inquiry and policy pages
 - Includes a gear settings modal with version, English/French/Spanish language preference, day/night theme, transparency, and translucency controls
 - Production site: `https://oleataxco.com/` on Cloudflare Pages, sourced from this GitHub repository
 
