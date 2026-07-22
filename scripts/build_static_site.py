@@ -8,7 +8,6 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "_site"
 PUBLIC_FILES = [
     "index.html",
-    "preview.html",
     "privacy.html",
     "terms.html",
     "data-deletion.html",
@@ -18,6 +17,7 @@ PUBLIC_FILES = [
 TEXT_SUFFIXES = {".html", ".js", ".xml", ".txt"}
 SOURCE_ORIGIN = os.environ.get("SOURCE_ORIGIN", "https://ec92009.github.io/oleataxco").rstrip("/")
 PUBLIC_ORIGIN = os.environ.get("PUBLIC_ORIGIN", "https://oleataxco.com").rstrip("/")
+INCLUDE_PREVIEW = os.environ.get("INCLUDE_PREVIEW", "1") == "1"
 
 
 def copy_site() -> None:
@@ -27,6 +27,9 @@ def copy_site() -> None:
 
     for filename in PUBLIC_FILES:
         shutil.copy2(ROOT / filename, OUT / filename)
+
+    if INCLUDE_PREVIEW:
+        shutil.copy2(ROOT / "preview.html", OUT / "preview.html")
 
     shutil.copytree(ROOT / "assets", OUT / "assets")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
