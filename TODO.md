@@ -2,7 +2,7 @@
 
 Last refreshed: 2026-07-06
 
-Current visible version: `v144.1`
+Current visible version: `v144.2`
 
 ## Numbered Backlog
 
@@ -36,6 +36,7 @@ Current visible version: `v144.1`
 
 ## Completed Notes
 
+- 2026-07-22: Approved `v144.2` Beyond the Website content upgrades for GitHub and Cloudflare publication: fit facts, fee-factor transparency without invented prices, guided non-sensitive email inquiry, expanded FAQs, and service/FAQ structured data.
 - 2026-07-22: Corrected the production build to preserve the GitHub site's light default theme and released `v144.1` consistently across GitHub Pages and Cloudflare Pages.
 - 2026-07-22: Prepared the `v144.0` production release for GitHub and Cloudflare Pages, with production canonical URLs, sitemap, and crawler metadata for `oleataxco.com`.
 - 2026-07-06: Upgraded the main static site to `v128.0` with working English/French/Spanish language switching and stronger transparency/translucency controls across the Liquid Glass surfaces.

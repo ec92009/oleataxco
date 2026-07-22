@@ -4,9 +4,9 @@ Last updated: 2026-07-22
 
 ## Current Request
 
-The latest request is to publish the static site to GitHub and Cloudflare Pages at `oleataxco.com`.
+The latest request is to publish the approved `v144.2` Beyond the Website content upgrade to GitHub and Cloudflare Pages.
 
-Latest site update: the production site is `v144.1` with matching light-default GitHub and Cloudflare builds, working English/French/Spanish language switching, scoped Liquid Glass styling, stronger transparency/translucency controls, a consolidated settings gear, mobile sticky inquiry CTA, baseline policy pages, and a footer credit for Web-By-Elie.com site creation and maintenance.
+Latest site update: `v144.2` adds concise fit facts, transparent fee factors, a guided non-sensitive email inquiry, expanded FAQs, and service/FAQ structured data while preserving the existing visual direction and multilingual settings.
 
 ## Repo Instructions In Force
 

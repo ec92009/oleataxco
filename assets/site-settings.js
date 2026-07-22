@@ -57,7 +57,7 @@
 
   function getVersion() {
     var meta = document.querySelector('meta[name="site-version"]');
-    return meta ? meta.getAttribute("content") || "v144.1" : "v144.1";
+    return meta ? meta.getAttribute("content") || "v144.2" : "v144.2";
   }
 
   function loadSettings() {
@@ -143,6 +143,7 @@
 
   var modal = createModal();
   var versionNode = modal.querySelector("[data-settings-version]");
+  var visibleVersionNodes = Array.prototype.slice.call(document.querySelectorAll("[data-visible-version]"));
   var languageSelect = modal.querySelector("[data-settings-language]");
   var themeButtons = Array.prototype.slice.call(modal.querySelectorAll("[data-theme-choice]"));
   var transparencyInput = modal.querySelector("[data-settings-transparency]");
@@ -209,6 +210,9 @@
     applyTranslations(language);
 
     versionNode.textContent = getVersion();
+    visibleVersionNodes.forEach(function (node) {
+      node.textContent = getVersion();
+    });
     languageSelect.value = language;
     transparencyInput.value = String(transparency);
     translucencyInput.value = String(blur);
