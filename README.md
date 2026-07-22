@@ -42,7 +42,7 @@ Deployment is handled by `.github/workflows/pages.yml`. The workflow stages only
 
 ## Current Build
 
-- Visible version: `v144.0`
+- Visible version: `v144.1`
 - Main draft site: `index.html`
 - Design preview: `preview.html`
 - Theme, settings, and glass-effect assets: `assets/`

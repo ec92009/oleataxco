@@ -57,7 +57,7 @@
 
   function getVersion() {
     var meta = document.querySelector('meta[name="site-version"]');
-    return meta ? meta.getAttribute("content") || "v144.0" : "v144.0";
+    return meta ? meta.getAttribute("content") || "v144.1" : "v144.1";
   }
 
   function loadSettings() {

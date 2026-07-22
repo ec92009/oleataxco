@@ -2,7 +2,7 @@
 
 Last refreshed: 2026-07-06
 
-Current visible version: `v144.0`
+Current visible version: `v144.1`
 
 ## Numbered Backlog
 
@@ -36,6 +36,7 @@ Current visible version: `v144.0`
 
 ## Completed Notes
 
+- 2026-07-22: Corrected the production build to preserve the GitHub site's light default theme and released `v144.1` consistently across GitHub Pages and Cloudflare Pages.
 - 2026-07-22: Prepared the `v144.0` production release for GitHub and Cloudflare Pages, with production canonical URLs, sitemap, and crawler metadata for `oleataxco.com`.
 - 2026-07-06: Upgraded the main static site to `v128.0` with working English/French/Spanish language switching and stronger transparency/translucency controls across the Liquid Glass surfaces.
 - 2026-05-29: Started the Kelly-first Cloudflare booking prototype in `cloudflare-booking/` with a Worker API skeleton, D1 schema, and Kelly seed data. Backend direction is custom availability storage, not Calendly/Acuity/Squarespace Scheduling.

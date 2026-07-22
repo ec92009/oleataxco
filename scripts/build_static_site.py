@@ -40,8 +40,6 @@ def normalize_text_files() -> None:
         if not path.is_file() or path.suffix not in TEXT_SUFFIXES:
             continue
         text = path.read_text(encoding="utf-8")
-        text = text.replace('data-theme="light"', 'data-theme="dark"')
-        text = text.replace('theme: "light"', 'theme: "dark"')
         text = text.replace(f"{SOURCE_ORIGIN}/", f"{PUBLIC_ORIGIN}/")
         text = text.replace(SOURCE_ORIGIN, PUBLIC_ORIGIN)
         path.write_text(text, encoding="utf-8")

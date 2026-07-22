@@ -6,7 +6,7 @@ Last updated: 2026-07-22
 
 The latest request is to publish the static site to GitHub and Cloudflare Pages at `oleataxco.com`.
 
-Latest site update: the production site is `v144.0` with working English/French/Spanish language switching, scoped Liquid Glass styling, stronger transparency/translucency controls, a consolidated settings gear, mobile sticky inquiry CTA, baseline policy pages, and a footer credit for Web-By-Elie.com site creation and maintenance.
+Latest site update: the production site is `v144.1` with matching light-default GitHub and Cloudflare builds, working English/French/Spanish language switching, scoped Liquid Glass styling, stronger transparency/translucency controls, a consolidated settings gear, mobile sticky inquiry CTA, baseline policy pages, and a footer credit for Web-By-Elie.com site creation and maintenance.
 
 ## Repo Instructions In Force
 
