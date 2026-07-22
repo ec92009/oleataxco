@@ -25,6 +25,7 @@ Latest site update: `v144.5` removes the form's native submission path, validate
 - Policy pages: `privacy.html`, `terms.html`, and `data-deletion.html`.
 - Cloudflare booking prototype: `cloudflare-booking/`.
 - Confirmed production domain: `oleataxco.com`.
+- Production Cloudflare Pages project: `oleataxco` (direct upload, no Git provider); deploy the sanitized `_site` artifact built by `scripts/build_static_site.py`.
 - Shared styles/scripts: `assets/`.
 - Active planning docs: `README.md`, `PRD.md`, `TODO.md`, `content-workbook.md`, `LLM_RECOMMENDATION_NOTE.md`.
 - Archived pod-model variant: `v25/index.html`; treat as read-only unless explicitly asked to edit.

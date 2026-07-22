@@ -53,7 +53,7 @@ Deployment is handled by `.github/workflows/pages.yml`. The workflow stages only
 - `v144.4` fixes the shared policy-page header so the logo stays compact and Privacy, Terms, and Data Deletion open with their content visible
 - `v144.5` removes native inquiry-form submission, preventing personal inquiry fields from reaching the site URL or host when JavaScript is unavailable
 - Includes a gear settings modal with version, English/French/Spanish language preference, day/night theme, transparency, and translucency controls
-- Production site: `https://oleataxco.com/` on Cloudflare Pages, sourced from this GitHub repository
+- Production site: `https://oleataxco.com/` on the direct-upload Cloudflare Pages project `oleataxco`; source is versioned in GitHub and production is deployed from the sanitized `_site` artifact
 
 ## Founder Photo
 
