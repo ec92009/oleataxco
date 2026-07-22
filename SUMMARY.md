@@ -4,9 +4,9 @@ Last updated: 2026-07-22
 
 ## Current Request
 
-The latest request is to correct the shared visual regression on the three public policy pages.
+The latest request is to make the public guided inquiry fail safely when JavaScript is unavailable.
 
-Latest site update: `v144.4` moves the logo sizing and brand alignment into shared CSS so Privacy, Terms, and Data Deletion render with a compact header and immediately visible policy content. The `v144.3` analytics and legitimate-purpose disclosures remain unchanged.
+Latest site update: `v144.5` removes the form's native submission path, validates fields only through the guided-email control, and provides a no-JavaScript plain-email fallback. Inquiry answers can no longer fall through to the site URL or static host logs. The `v144.4` policy-page header fix remains unchanged.
 
 ## Repo Instructions In Force
 
@@ -49,6 +49,9 @@ Olea Tax Co is positioned as a boutique strategic CPA advisory firm for business
 
 ## Work Completed In This Pass
 
+- Removed native form submission so a missing/blocked script cannot send inquiry fields to the static site.
+- Added a no-JavaScript plain-email fallback and retained browser-native field validation for the guided path.
+- Bumped active site/docs version references to `v144.5`.
 - Prepared the production canonical URLs, crawler metadata, and release surfaces for `https://oleataxco.com/` on Cloudflare Pages.
 - Bumped active site/docs version references to `v144.0` for the 2026-07-22 production release.
 

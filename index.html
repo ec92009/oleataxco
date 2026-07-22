@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Olea Tax Co. | Strategic Tax Planning &amp; CPA Services</title>
   <meta name="description" content="Olea Tax Co. provides strategic CPA advisory, tax filing, quarterly estimates, and proactive tax planning for business owners." />
-  <meta name="site-version" content="v144.4" />
+  <meta name="site-version" content="v144.5" />
   <link rel="canonical" href="https://oleataxco.com/" />
   <meta property="og:title" content="Olea Tax Co. | Strategic Tax Planning &amp; CPA Services" />
   <meta property="og:description" content="Strategic CPA advisory, tax filing, estimates, and proactive tax planning for business owners." />
@@ -19,8 +19,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=144.4" />
-  <link rel="stylesheet" href="assets/liquid-glass.css?v=144.4" />
+  <link rel="stylesheet" href="assets/styles.css?v=144.5" />
+  <link rel="stylesheet" href="assets/liquid-glass.css?v=144.5" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -393,10 +393,10 @@
             <p data-i18n="secureBody">Tax documents and sensitive financial details should move through secure sharing, not social DMs.</p>
           </div>
         </div>
-        <form class="inquiry-form panel" data-inquiry-form>
+        <div class="inquiry-form panel" data-inquiry-form role="form" aria-labelledby="inquiry-form-title">
           <div class="form-heading">
             <p class="eyebrow" data-i18n="inquiryFormEyebrow">Guided first step</p>
-            <h3 data-i18n="inquiryFormTitle">Prepare your inquiry</h3>
+            <h3 id="inquiry-form-title" data-i18n="inquiryFormTitle">Prepare your inquiry</h3>
             <p data-i18n="inquiryFormIntro">Answer a few non-sensitive questions. The form prepares an email in your own email app; it does not upload or store your answers.</p>
           </div>
           <div class="form-grid">
@@ -438,11 +438,14 @@
           <p class="form-caution" data-i18n="formCaution">Do not include Social Security numbers, account numbers, tax documents, or other sensitive financial information.</p>
           <p class="small" data-i18n="formPurpose">If you choose to send the email, Olea Tax Co. uses the information only to evaluate and respond to your inquiry, provide requested services, or meet legitimate legal and professional record obligations. It is not sold or used for unrelated advertising.</p>
           <div class="cta-row">
-            <button class="button" type="submit" data-i18n="prepareInquiry">Prepare Email Inquiry</button>
+            <button class="button" type="button" data-inquiry-submit data-i18n="prepareInquiry">Prepare Email Inquiry</button>
             <a class="button alt" href="mailto:hello@oleataxco.com?subject=Olea%20Tax%20Co.%20inquiry" data-i18n="plainEmail">Use Plain Email</a>
           </div>
+          <noscript>
+            <p class="small">The guided inquiry requires JavaScript. Please use <a href="mailto:hello@oleataxco.com?subject=Olea%20Tax%20Co.%20inquiry">plain email</a>; no answers from this page will be submitted.</p>
+          </noscript>
           <p class="form-status small" data-inquiry-status aria-live="polite"></p>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -488,9 +491,9 @@
     </div>
   </footer>
   <a class="mobile-sticky-cta" data-mobile-sticky-cta href="#inquiry" data-i18n="startInquiry">Start an Inquiry</a>
-  <span class="visible-version-pill" data-visible-version aria-label="Site version">v144.4</span>
-  <script src="assets/site-i18n.js?v=144.4"></script>
-  <script src="assets/site-settings.js?v=144.4"></script>
-  <script src="assets/inquiry-form.js?v=144.4"></script>
+  <span class="visible-version-pill" data-visible-version aria-label="Site version">v144.5</span>
+  <script src="assets/site-i18n.js?v=144.5"></script>
+  <script src="assets/site-settings.js?v=144.5"></script>
+  <script src="assets/inquiry-form.js?v=144.5"></script>
 </body>
 </html>

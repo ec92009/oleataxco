@@ -1,30 +1,43 @@
 (function () {
-  var form = document.querySelector("[data-inquiry-form]");
-  if (!form) return;
+  var inquiry = document.querySelector("[data-inquiry-form]");
+  if (!inquiry) return;
 
-  var status = form.querySelector("[data-inquiry-status]");
+  var submitButton = inquiry.querySelector("[data-inquiry-submit]");
+  var status = inquiry.querySelector("[data-inquiry-status]");
   var recipient = "hello@oleataxco.com";
+  var fieldNames = ["name", "email", "service", "entity", "taxYear", "timing", "summary"];
+
+  if (!submitButton) return;
 
   function clean(value) {
     return String(value || "").trim();
   }
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  function getField(name) {
+    return inquiry.querySelector('[name="' + name + '"]');
+  }
 
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
+  function validateFields() {
+    for (var index = 0; index < fieldNames.length; index += 1) {
+      var field = getField(fieldNames[index]);
+      if (field && !field.checkValidity()) {
+        field.reportValidity();
+        return false;
+      }
     }
+    return true;
+  }
 
-    var fields = new FormData(form);
-    var name = clean(fields.get("name"));
-    var email = clean(fields.get("email"));
-    var service = clean(fields.get("service"));
-    var entity = clean(fields.get("entity")) || "Not provided";
-    var taxYear = clean(fields.get("taxYear")) || "Not provided";
-    var timing = clean(fields.get("timing")) || "Not provided";
-    var summary = clean(fields.get("summary"));
+  submitButton.addEventListener("click", function () {
+    if (!validateFields()) return;
+
+    var name = clean(getField("name").value);
+    var email = clean(getField("email").value);
+    var service = clean(getField("service").value);
+    var entity = clean(getField("entity").value) || "Not provided";
+    var taxYear = clean(getField("taxYear").value) || "Not provided";
+    var timing = clean(getField("timing").value) || "Not provided";
+    var summary = clean(getField("summary").value);
     var subject = "Olea Tax Co. inquiry - " + service;
     var body = [
       "Hello Kelly,",
@@ -53,6 +66,8 @@
         "Opening your email app. Review the message before sending.";
     }
 
-    window.location.href = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    var emailLink = document.createElement("a");
+    emailLink.href = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    emailLink.click();
   });
 })();
