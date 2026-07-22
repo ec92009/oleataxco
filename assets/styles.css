@@ -418,6 +418,9 @@ a.button.alt:active {
   gap: 1.2rem;
   margin-top: 1.2rem;
 }
+section[id] {
+  scroll-margin-top: 10rem;
+}
 .whoami-row {
   grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.05fr);
 }
@@ -441,6 +444,7 @@ a.button.alt:active {
   display: grid;
   gap: 0.9rem;
 }
+.cards.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .cards.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .cards.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .step-num {
@@ -461,6 +465,64 @@ a.button.alt:active {
 .card h3 { margin-bottom: 0.3rem; }
 .card p, .card li { color: var(--muted); }
 .card li { color: var(--text); }
+
+.section-intro {
+  max-width: 66ch;
+  color: var(--muted);
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.fact-card {
+  min-height: 100%;
+}
+
+.fact-card p {
+  margin-bottom: 0;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-fee-note {
+  margin: auto 0 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+  color: var(--text) !important;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.fee-clarity {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  gap: 1rem 2rem;
+  margin-top: 1rem;
+  padding: 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 7%, var(--surface-1));
+}
+
+.fee-clarity h3,
+.fee-clarity p {
+  margin-top: 0;
+}
+
+.fee-clarity ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.fee-clarity li + li {
+  margin-top: 0.35rem;
+}
 
 .book-call-grid {
   display: grid;
@@ -506,6 +568,87 @@ a.button.alt:active {
 .response-note {
   margin: 0.9rem 0 0;
   color: var(--muted);
+}
+
+.inquiry-safety {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.inquiry-safety h3,
+.inquiry-safety p {
+  margin: 0;
+}
+
+.inquiry-safety p {
+  margin-top: 0.35rem;
+}
+
+.inquiry-form {
+  padding: 1rem;
+  background: color-mix(in srgb, var(--surface-2) 92%, white 8%);
+}
+
+.form-heading h3,
+.form-heading p {
+  margin-top: 0;
+}
+
+.form-heading h3 {
+  margin-bottom: 0.35rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.72rem 0.78rem;
+  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface-1) 94%, white 6%);
+  color: var(--text);
+  font: inherit;
+  font-weight: 500;
+}
+
+.form-grid textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.form-wide {
+  grid-column: 1 / -1;
+}
+
+.form-caution {
+  margin: 0.9rem 0;
+  padding: 0.7rem 0.8rem;
+  border-left: 3px solid var(--accent-2);
+  background: color-mix(in srgb, var(--accent-2) 10%, transparent);
+  color: var(--text);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.form-status {
+  min-height: 1.4em;
+  margin: 0.7rem 0 0;
 }
 .book-call-note {
   margin-top: 0.7rem;
@@ -576,6 +719,25 @@ a.button.alt:active {
   width: min(1150px, calc(100% - 1.5rem));
   margin: 1.2rem auto 2.4rem;
   color: var(--muted);
+}
+
+.visible-version-pill {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 95;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.62rem;
+  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface-1) 88%, white 12%);
+  color: var(--text);
+  box-shadow: 0 10px 24px rgba(20, 16, 11, 0.12);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
 .footer-inner {
@@ -695,6 +857,8 @@ a.button.alt:active {
   }
   .cards.cols-3,
   .cards.cols-4,
+  .fact-grid,
+  .fee-clarity,
   .book-call-grid,
   .channel-list,
   .footer-inner {
@@ -706,6 +870,19 @@ a.button.alt:active {
 }
 
 @media (max-width: 640px) {
+  .visible-version-pill {
+    bottom: 5rem;
+  }
+  section[id] {
+    scroll-margin-top: 15rem;
+  }
+  .cards.cols-2,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-wide {
+    grid-column: auto;
+  }
   .topbar {
     align-items: flex-start;
     flex-direction: column;
