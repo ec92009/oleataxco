@@ -4,9 +4,9 @@ Last updated: 2026-07-22
 
 ## Current Request
 
-The latest request is to begin privacy-conscious production traffic monitoring and clarify that information is used only for legitimate, disclosed purposes.
+The latest request is to correct the shared visual regression on the three public policy pages.
 
-Latest site update: `v144.3` enables Cloudflare Web Analytics automatic setup with EU visitor measurements excluded, adds legitimate-purpose-only wording to the multilingual inquiry, and updates the privacy/data-deletion disclosures. The inquiry remains a local `mailto:` flow with no public submission endpoint.
+Latest site update: `v144.4` moves the logo sizing and brand alignment into shared CSS so Privacy, Terms, and Data Deletion render with a compact header and immediately visible policy content. The `v144.3` analytics and legitimate-purpose disclosures remain unchanged.
 
 ## Repo Instructions In Force
 
