@@ -4,9 +4,9 @@ Last updated: 2026-07-22
 
 ## Current Request
 
-The latest request is to publish the approved `v144.2` Beyond the Website content upgrade to GitHub and Cloudflare Pages.
+The latest request is to begin privacy-conscious production traffic monitoring and clarify that information is used only for legitimate, disclosed purposes.
 
-Latest site update: `v144.2` adds concise fit facts, transparent fee factors, a guided non-sensitive email inquiry, expanded FAQs, and service/FAQ structured data while preserving the existing visual direction and multilingual settings.
+Latest site update: `v144.3` enables Cloudflare Web Analytics automatic setup with EU visitor measurements excluded, adds legitimate-purpose-only wording to the multilingual inquiry, and updates the privacy/data-deletion disclosures. The inquiry remains a local `mailto:` flow with no public submission endpoint.
 
 ## Repo Instructions In Force
 
