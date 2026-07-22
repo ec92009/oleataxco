@@ -9,9 +9,14 @@
   var defaults = {
     theme: "light",
     language: "en",
-    transparency: 86,
+    transparency: 14,
     translucency: 16
   };
+
+  var i18n = window.OLEA_SITE_I18N || {};
+  var supportedLanguages = i18n.supportedLanguages || ["en"];
+  var languageCodes = i18n.languageCodes || { en: "en" };
+  var translations = i18n.translations || { en: {} };
 
   function clamp(value, min, max) {
     var number = Number(value);
@@ -19,9 +24,40 @@
     return Math.min(max, Math.max(min, number));
   }
 
+  function normalizeLanguage(language) {
+    return supportedLanguages.indexOf(language) >= 0 ? language : defaults.language;
+  }
+
+  function normalizeTransparency(value) {
+    var number = Number(value);
+    if (!Number.isFinite(number)) return defaults.transparency;
+    if (number > 60) number = 100 - number;
+    return clamp(number, 4, 30);
+  }
+
+  function translate(key, language) {
+    var normalized = normalizeLanguage(language);
+    return (translations[normalized] && translations[normalized][key]) || translations.en[key] || "";
+  }
+
+  function setMeta(name, value) {
+    var node = document.querySelector('meta[name="' + name + '"]');
+    if (node) node.setAttribute("content", value);
+  }
+
+  function setPropertyMeta(property, value) {
+    var node = document.querySelector('meta[property="' + property + '"]');
+    if (node) node.setAttribute("content", value);
+  }
+
+  function setGlassVariable(name, value) {
+    root.style.setProperty(name, value);
+    if (document.body) document.body.style.setProperty(name, value);
+  }
+
   function getVersion() {
     var meta = document.querySelector('meta[name="site-version"]');
-    return meta ? meta.getAttribute("content") || "v118.0" : "v118.0";
+    return meta ? meta.getAttribute("content") || "v144.0" : "v144.0";
   }
 
   function loadSettings() {
@@ -38,9 +74,9 @@
 
     return {
       theme: saved.theme === "dark" || saved.theme === "light" ? saved.theme : defaults.theme,
-      language: ["en", "fr", "es"].indexOf(saved.language) >= 0 ? saved.language : defaults.language,
-      transparency: saved.transparency == null ? defaults.transparency : clamp(saved.transparency, 70, 96),
-      translucency: saved.translucency == null ? defaults.translucency : clamp(saved.translucency, 8, 24)
+      language: normalizeLanguage(saved.language),
+      transparency: saved.transparency == null ? defaults.transparency : normalizeTransparency(saved.transparency),
+      translucency: saved.translucency == null ? defaults.translucency : clamp(saved.translucency, 6, 28)
     };
   }
 
@@ -65,38 +101,38 @@
     modal.innerHTML = [
       '<section class="settings-popover" role="dialog" aria-modal="true" aria-labelledby="settings-title">',
       '  <div class="settings-head">',
-      '    <h2 class="settings-title" id="settings-title">Settings</h2>',
-      '    <button type="button" class="settings-close" data-settings-close aria-label="Close settings">',
+      '    <h2 class="settings-title" id="settings-title" data-i18n="settingsTitle">Settings</h2>',
+      '    <button type="button" class="settings-close" data-settings-close aria-label="Close settings" data-i18n-attr="aria-label:settingsClose">',
       '      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>',
       "    </button>",
       "  </div>",
       '  <div class="settings-stack">',
       '    <div class="settings-row">',
-      '      <span class="settings-label">About</span>',
+      '      <span class="settings-label" data-i18n="settingsAbout">About</span>',
       '      <span class="settings-value" data-settings-version></span>',
       "    </div>",
       '    <label class="settings-field">',
-      '      <span class="settings-label">Language</span>',
+      '      <span class="settings-label" data-i18n="settingsLanguage">Language</span>',
       '      <select class="settings-select" data-settings-language>',
-      '        <option value="en">English</option>',
-      '        <option value="fr">French</option>',
-      '        <option value="es">Spanish</option>',
+      '        <option value="en" data-i18n="languageEnglish">English</option>',
+      '        <option value="fr" data-i18n="languageFrench">French</option>',
+      '        <option value="es" data-i18n="languageSpanish">Spanish</option>',
       "      </select>",
       "    </label>",
       '    <div class="settings-field">',
-      '      <span class="settings-label">Theme</span>',
-      '      <div class="settings-segmented" role="group" aria-label="Theme">',
-      '        <button type="button" data-theme-choice="light">Day</button>',
-      '        <button type="button" data-theme-choice="dark">Night</button>',
+      '      <span class="settings-label" data-i18n="settingsTheme">Theme</span>',
+      '      <div class="settings-segmented" role="group" aria-label="Theme" data-i18n-attr="aria-label:themeGroup">',
+      '        <button type="button" data-theme-choice="light" data-i18n="themeDay">Day</button>',
+      '        <button type="button" data-theme-choice="dark" data-i18n="themeNight">Night</button>',
       "      </div>",
       "    </div>",
       '    <label class="settings-field">',
-      '      <span class="settings-row"><span class="settings-label">Transparency</span><span class="settings-value" data-transparency-value></span></span>',
-      '      <input class="settings-range" data-settings-transparency type="range" min="70" max="96" step="1" />',
+      '      <span class="settings-row"><span class="settings-label" data-i18n="settingsTransparency">Transparency</span><span class="settings-value" data-transparency-value></span></span>',
+      '      <input class="settings-range" data-settings-transparency type="range" min="4" max="30" step="1" />',
       "    </label>",
       '    <label class="settings-field">',
-      '      <span class="settings-row"><span class="settings-label">Translucency</span><span class="settings-value" data-translucency-value></span></span>',
-      '      <input class="settings-range" data-settings-translucency type="range" min="8" max="24" step="1" />',
+      '      <span class="settings-row"><span class="settings-label" data-i18n="settingsTranslucency">Translucency</span><span class="settings-value" data-translucency-value></span></span>',
+      '      <input class="settings-range" data-settings-translucency type="range" min="6" max="28" step="1" />',
       "    </label>",
       "  </div>",
       "</section>"
@@ -115,29 +151,71 @@
   var translucencyValue = modal.querySelector("[data-translucency-value]");
   var closeButton = modal.querySelector("[data-settings-close]");
 
+  function applyTranslations(language) {
+    var normalized = normalizeLanguage(language);
+
+    root.setAttribute("lang", languageCodes[normalized] || normalized);
+    document.title = translate("pageTitle", normalized);
+    setMeta("description", translate("metaDescription", normalized));
+    setMeta("twitter:title", translate("pageTitle", normalized));
+    setMeta("twitter:description", translate("metaSocialDescription", normalized));
+    setPropertyMeta("og:title", translate("pageTitle", normalized));
+    setPropertyMeta("og:description", translate("metaSocialDescription", normalized));
+
+    Array.prototype.slice.call(document.querySelectorAll("[data-i18n]")).forEach(function (node) {
+      var value = translate(node.getAttribute("data-i18n"), normalized);
+      if (value) node.textContent = value;
+    });
+
+    Array.prototype.slice.call(document.querySelectorAll("[data-i18n-html]")).forEach(function (node) {
+      var value = translate(node.getAttribute("data-i18n-html"), normalized);
+      if (value) node.innerHTML = value;
+    });
+
+    Array.prototype.slice.call(document.querySelectorAll("[data-i18n-attr]")).forEach(function (node) {
+      node.getAttribute("data-i18n-attr").split(/[;,]/).forEach(function (pair) {
+        var parts = pair.split(":");
+        if (parts.length !== 2) return;
+        var attr = parts[0].trim();
+        var key = parts[1].trim();
+        var value = translate(key, normalized);
+        if (attr && value) node.setAttribute(attr, value);
+      });
+    });
+  }
+
   function applySettings(shouldSave) {
-    var alpha = clamp(settings.transparency, 70, 96);
-    var blur = clamp(settings.translucency, 8, 24);
-    var language = ["en", "fr", "es"].indexOf(settings.language) >= 0 ? settings.language : "en";
+    var transparency = normalizeTransparency(settings.transparency);
+    var alpha = 100 - transparency;
+    var blur = clamp(settings.translucency, 6, 28);
+    var language = normalizeLanguage(settings.language);
     var theme = settings.theme === "dark" ? "dark" : "light";
 
-    settings.transparency = alpha;
+    settings.transparency = transparency;
     settings.translucency = blur;
     settings.language = language;
     settings.theme = theme;
 
     root.setAttribute("data-theme", theme);
     root.setAttribute("data-language", language);
-    root.style.setProperty("--glass-alpha", alpha + "%");
-    root.style.setProperty("--glass-alpha-soft", Math.max(62, alpha - 6) + "%");
-    root.style.setProperty("--glass-blur", blur + "px");
+    setGlassVariable("--glass-alpha", alpha + "%");
+    setGlassVariable("--glass-alpha-soft", Math.max(58, alpha - 8) + "%");
+    setGlassVariable("--glass-control-alpha", Math.max(54, alpha - 10) + "%");
+    setGlassVariable("--glass-popover-alpha", Math.min(96, alpha + 4) + "%");
+    setGlassVariable("--glass-accent-alpha", Math.max(62, alpha - 2) + "%");
+    setGlassVariable("--glass-sheen-opacity", Math.max(0.38, (80 - transparency) / 100));
+    setGlassVariable("--glass-blur", blur + "px");
+
+    applyTranslations(language);
 
     versionNode.textContent = getVersion();
     languageSelect.value = language;
-    transparencyInput.value = String(alpha);
+    transparencyInput.value = String(transparency);
     translucencyInput.value = String(blur);
-    transparencyValue.textContent = alpha + "%";
-    translucencyValue.textContent = blur + "px";
+    transparencyValue.textContent = translate("transparencyValue", language).replace("{value}", transparency);
+    translucencyValue.textContent = translate("translucencyValue", language).replace("{value}", blur);
+    transparencyInput.setAttribute("aria-valuetext", transparencyValue.textContent);
+    translucencyInput.setAttribute("aria-valuetext", translucencyValue.textContent);
 
     themeButtons.forEach(function (button) {
       button.setAttribute("aria-pressed", button.getAttribute("data-theme-choice") === theme ? "true" : "false");

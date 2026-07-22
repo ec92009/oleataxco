@@ -1,12 +1,12 @@
 # Olea Tax Co Conversation Summary
 
-Last updated: 2026-06-26
+Last updated: 2026-07-22
 
 ## Current Request
 
-The latest request is to republish the main static site after adding the Web-By-Elie.com footer credit.
+The latest request is to publish the static site to GitHub and Cloudflare Pages at `oleataxco.com`.
 
-Latest site update: the main draft site is `v118.0` with scoped Liquid Glass styling, a consolidated settings gear, mobile sticky inquiry CTA, baseline policy pages, and a footer credit for Web-By-Elie.com site creation and maintenance.
+Latest site update: the production site is `v144.0` with working English/French/Spanish language switching, scoped Liquid Glass styling, stronger transparency/translucency controls, a consolidated settings gear, mobile sticky inquiry CTA, baseline policy pages, and a footer credit for Web-By-Elie.com site creation and maintenance.
 
 ## Repo Instructions In Force
 
@@ -28,7 +28,8 @@ Latest site update: the main draft site is `v118.0` with scoped Liquid Glass sty
 - Shared styles/scripts: `assets/`.
 - Active planning docs: `README.md`, `PRD.md`, `TODO.md`, `content-workbook.md`, `LLM_RECOMMENDATION_NOTE.md`.
 - Archived pod-model variant: `v25/index.html`; treat as read-only unless explicitly asked to edit.
-- Central ticket: `OLEATAXCO-20260617-B583` tracks the completed `v109.1` Liquid Glass/settings upgrade.
+- Central ticket: `OLEATAXCO-20260706-389F` tracks the completed `v128.0` language and glass-control follow-up.
+- Earlier central ticket: `OLEATAXCO-20260617-B583` tracks the completed `v109.1` Liquid Glass/settings upgrade.
 
 ## Current Positioning
 
@@ -48,8 +49,14 @@ Olea Tax Co is positioned as a boutique strategic CPA advisory firm for business
 
 ## Work Completed In This Pass
 
-- Added the Web-By-Elie.com footer credit to the main homepage.
-- Bumped active site/docs version references to `v118.0`.
+- Prepared the production canonical URLs, crawler metadata, and release surfaces for `https://oleataxco.com/` on Cloudflare Pages.
+- Bumped active site/docs version references to `v144.0` for the 2026-07-22 production release.
+
+## Previous Language And Glass Controls Pass
+
+- Added working English/French/Spanish localization for the main homepage and settings modal.
+- Reworked the transparency slider into a true percent-transparent control and expanded glass variables across cards, topbar, settings, badges, and sticky CTA.
+- Bumped active site/docs version references to `v128.0`.
 
 ## Previous Site Upgrade Pass
 
@@ -62,6 +69,6 @@ Olea Tax Co is positioned as a boutique strategic CPA advisory firm for business
 
 ## Latest Validation
 
-- `node --check assets/site-settings.js` passed for the static-site settings script.
-- `git fetch origin` confirmed local `main` is based on current `origin/main` before the handoff commit.
+- `node --check assets/site-i18n.js` and `node --check assets/site-settings.js` passed for the static-site settings scripts.
+- Local browser QA at `http://localhost:8000/` verified English, Spanish, and French language changes, metadata/title changes, transparency/translucency rendered CSS variables, no local console warnings/errors, and no mobile horizontal overflow.
 - Run the local static server and browser check after future site-surface changes.

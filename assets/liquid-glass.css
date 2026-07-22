@@ -16,6 +16,10 @@ body.concept-neighborhood {
   --radius: 8px;
   --glass-alpha: 86%;
   --glass-alpha-soft: 80%;
+  --glass-control-alpha: 76%;
+  --glass-popover-alpha: 90%;
+  --glass-accent-alpha: 84%;
+  --glass-sheen-opacity: 0.66;
   --glass-blur: 16px;
 }
 
@@ -107,6 +111,12 @@ body {
   box-shadow: var(--shadow);
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.15);
   backdrop-filter: blur(var(--glass-blur)) saturate(1.15);
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    -webkit-backdrop-filter 180ms ease,
+    backdrop-filter 180ms ease;
 }
 
 .topbar {
@@ -169,7 +179,7 @@ body {
   background:
     linear-gradient(115deg, rgba(255, 255, 255, 0.22), transparent 28%),
     linear-gradient(180deg, color-mix(in srgb, var(--accent-2) 7%, transparent), transparent 44%);
-  opacity: 0.7;
+  opacity: var(--glass-sheen-opacity);
 }
 
 .hero-copy > *,
@@ -179,7 +189,9 @@ body {
 }
 
 .trust-strip span {
-  background: color-mix(in srgb, var(--surface-1) 70%, var(--accent) 8%);
+  background: color-mix(in srgb, var(--surface-1) var(--glass-control-alpha), var(--accent) 8%);
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.55));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.55));
 }
 
 .card,
@@ -215,7 +227,7 @@ body {
     transform: translateX(-36%);
   }
   32% {
-    opacity: 0.8;
+    opacity: var(--glass-sheen-opacity);
   }
   100% {
     opacity: 0;
@@ -275,7 +287,7 @@ body {
 .settings-button:hover,
 .settings-close:hover {
   border-color: color-mix(in srgb, var(--accent) 36%, var(--line));
-  background: color-mix(in srgb, var(--surface-3) 86%, transparent);
+  background: color-mix(in srgb, var(--surface-3) var(--glass-control-alpha), transparent);
 }
 
 .settings-button svg,
@@ -295,6 +307,8 @@ body {
   place-items: start end;
   padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
   background: rgba(5, 11, 10, 0.22);
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.35));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.35));
 }
 
 .settings-popover {
@@ -304,7 +318,7 @@ body {
   padding: 1rem;
   border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--surface-1) 92%, transparent);
+  background: color-mix(in srgb, var(--surface-1) var(--glass-popover-alpha), transparent);
   color: var(--text);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.18);
@@ -362,9 +376,11 @@ body {
   padding: 0.48rem 0.65rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--surface-2) 82%, transparent);
+  background: color-mix(in srgb, var(--surface-2) var(--glass-control-alpha), transparent);
   color: var(--text);
   font: inherit;
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.65));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.65));
 }
 
 .settings-segmented {
@@ -374,7 +390,9 @@ body {
   padding: 0.25rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--surface-2) 82%, transparent);
+  background: color-mix(in srgb, var(--surface-2) var(--glass-control-alpha), transparent);
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.65));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.65));
 }
 
 .settings-segmented button {
@@ -413,7 +431,7 @@ body.settings-open {
   min-height: 3.05rem;
   border: 1px solid color-mix(in srgb, var(--accent) 48%, var(--line));
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--accent) 88%, transparent);
+  background: color-mix(in srgb, var(--accent) var(--glass-accent-alpha), transparent);
   color: var(--button-text);
   font-weight: 800;
   text-decoration: none;

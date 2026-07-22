@@ -42,13 +42,14 @@ Deployment is handled by `.github/workflows/pages.yml`. The workflow stages only
 
 ## Current Build
 
-- Visible version: `v118.0`
+- Visible version: `v144.0`
 - Main draft site: `index.html`
 - Design preview: `preview.html`
 - Theme, settings, and glass-effect assets: `assets/`
 - Includes a `Start an Inquiry` section focused on async email/DM intake
 - Includes production SEO foundations, `robots.txt`, `sitemap.xml`, JSON-LD schema, footer, and baseline Privacy, Terms, and Data Deletion pages
-- Includes a gear settings modal with version, language preference, day/night theme, transparency, and translucency controls
+- Includes a gear settings modal with version, English/French/Spanish language preference, day/night theme, transparency, and translucency controls
+- Production site: `https://oleataxco.com/` on Cloudflare Pages, sourced from this GitHub repository
 
 ## Founder Photo
 

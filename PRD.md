@@ -5,10 +5,10 @@
 - Status: Draft
 - Product: Olea Tax Co website
 - Product type: Marketing and lead-generation site
-- Current draft version: `v118.0`
-- Current preview: `https://ec92009.github.io/oleataxco/`
+- Current production version: `v144.0`
+- Production site: `https://oleataxco.com/`
 - Local workspace: `~/Dev/oleataxco`
-- Last refreshed: 2026-06-26
+- Last refreshed: 2026-07-06
 
 ## 1. Product Summary
 
@@ -16,7 +16,7 @@ Olea Tax Co needs a professional website that positions the firm as a strategic 
 
 The current site is a draft marketing homepage with async-first inquiry copy and draft content. This PRD defines the requirements for a production-ready website that can launch publicly on a simple stack first and later move into SquareSpace or another CMS if needed.
 
-Confirmed production domain: `oleataxco.com`.
+Confirmed production domain: `oleataxco.com`, hosted on Cloudflare Pages from the GitHub source repository.
 
 ## 2. Problem
 

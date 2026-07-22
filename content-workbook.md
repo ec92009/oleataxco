@@ -2,11 +2,11 @@
 
 Use this to gather content before building in SquareSpace.
 
-Last refreshed: 2026-06-26
+Last refreshed: 2026-07-22
 
 Current draft status:
 
-- Draft site version: `v118.0`
+- Production site version: `v144.0`
 - Primary positioning: strategic CPA advisory for business owners, with high-income families retained as an approved audience in planning docs.
 - Primary intake model: async-first email/DM introduction, followed by fit assessment and secure document handoff where appropriate.
 - Known boundaries: Olea Tax Co. does not provide bookkeeping; sensitive tax or financial documents should not be sent through social DMs.
