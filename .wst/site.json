@@ -1,0 +1,139 @@
+{
+  "manifest_version": "wst.site.v1",
+  "site_id": "olea-tax",
+  "name": "Olea Tax Co",
+  "production_url": "https://oleataxco.com/",
+  "ownership_verified": true,
+  "approval_status": "awaiting",
+  "beacon_verified": false,
+  "operational_state": "partial",
+  "monitorability": {
+    "contract_version": "wst.monitorable.v1",
+    "owner_role": "Olea Tax Co site owner",
+    "approval_ref": null,
+    "route_scope": ["/"],
+    "surfaces": [
+      {
+        "environment": "development",
+        "url": "http://localhost:8000/",
+        "version": "249.0",
+        "version_url": "http://localhost:8000/VERSION",
+        "note": "Local source review surface; the server need not be running."
+      },
+      {
+        "environment": "preview",
+        "url": "https://wst-onboarding.oleataxco.pages.dev/",
+        "version": "249.0",
+        "version_url": "https://wst-onboarding.oleataxco.pages.dev/VERSION",
+        "note": "Separate noindex Pages monitoring candidate with synthetic sessionless signals excluded from production totals."
+      },
+      {
+        "environment": "preview",
+        "url": "https://ec92009.github.io/oleataxco/",
+        "version": "144.5",
+        "version_url": null,
+        "note": "Existing GitHub Pages review surface; it is not counted as production."
+      },
+      {
+        "environment": "production",
+        "url": "https://oleataxco.com/",
+        "version": "144.5",
+        "version_url": null,
+        "note": "Current Cloudflare Pages production surface; WST browser instrumentation is not enabled."
+      }
+    ],
+    "capabilities": {
+      "browser_traffic": {
+        "state": "planned",
+        "source": null,
+        "freshness_hours": null,
+        "next_action": "Obtain owner approval and policy review before enabling WST production page views."
+      },
+      "edge_traffic": {
+        "state": "planned",
+        "source": "Cloudflare Pages and a declared Cloudflare Web Analytics configuration",
+        "freshness_hours": null,
+        "next_action": "Verify read-only Cloudflare aggregate access and reconcile the declared analytics configuration with the absent live-page beacon."
+      },
+      "cta": {
+        "state": "planned",
+        "source": null,
+        "freshness_hours": null,
+        "next_action": "Preserve the ten stable CTA IDs and activate them only after owner approval."
+      },
+      "conversions": {
+        "state": "planned",
+        "source": null,
+        "freshness_hours": null,
+        "next_action": "Define an authoritative privacy-safe inquiry receipt; a mailto press alone is not a delivered or accepted inquiry."
+      },
+      "health": {
+        "state": "implemented",
+        "source": "WST read-only HTTPS health probe",
+        "freshness_hours": 24,
+        "next_action": "Repeat safe GET checks after releases and retain version/content evidence separately."
+      },
+      "field_vitals": {
+        "state": "planned",
+        "source": null,
+        "freshness_hours": null,
+        "next_action": "Use privacy-safe field measurements only after policy approval and sufficient samples."
+      },
+      "lab_performance": {
+        "state": "planned",
+        "source": "Chrome DevTools",
+        "freshness_hours": null,
+        "next_action": "Run the shared responsive and performance matrix on the approved release candidate."
+      }
+    },
+    "cta_ids": [
+      "nav_inquiry",
+      "hero_inquiry",
+      "hero_services",
+      "inquiry_prepare_email",
+      "inquiry_plain_email",
+      "contact_email",
+      "contact_inquiry_options",
+      "footer_email",
+      "footer_inquiry",
+      "mobile_inquiry"
+    ],
+    "conversion_receipts": [],
+    "privacy_profile": "wst.event.v1",
+    "consent_authority": "disabled",
+    "collector_url": null,
+    "performance_profile": "wst.responsive-performance.v1",
+    "standards_profile": "elies-websites",
+    "standards_profile_version": "elies-websites.v1",
+    "standards_status": "partial",
+    "standards_evidence": [
+      "The v249.0 source preserves Olea's verified services, inquiry flow, translations, policy routes, settings, theme controls, reduced-motion behavior, and fixed bottom-right version pill.",
+      "Ten stable CTA identifiers cover inquiry discovery, service navigation, email preparation, direct email, footer, and mobile actions without collecting form contents.",
+      "The build keeps synthetic monitoring and noindex headers exclusive to an explicit WST_PREVIEW artifact; the live production artifact remains unchanged."
+    ],
+    "standards_next_action": "Obtain owner/policy approval, then complete the 320/375/390/768/1280, landscape, 200% zoom, keyboard, reduced-motion, fixed-control, and lab-performance acceptance matrix.",
+    "disable_tracking": "Build without WST_PREVIEW=1; the production artifact then contains no WST beacon or monitoring disclosure, while all site interactions remain unchanged.",
+    "exceptions": [
+      {
+        "requirement": "owner approval and policy review",
+        "reason": "No Olea site-owner approval for WST production instrumentation is recorded.",
+        "next_action": "Obtain written owner approval and confirm the click-counting policy language before production activation."
+      },
+      {
+        "requirement": "analytics source reconciliation",
+        "reason": "The repository and privacy policy declare Cloudflare Web Analytics, but the live homepage probe exposes no browser analytics beacon.",
+        "next_action": "Verify the Cloudflare analytics configuration read-only and record whether usable aggregate history exists."
+      },
+      {
+        "requirement": "authoritative inquiry outcome",
+        "reason": "Olea uses local mailto preparation, which proves only a button press and not email delivery, acceptance, qualification, or revenue.",
+        "next_action": "Choose a privacy-safe authoritative receipt source before reporting conversions."
+      },
+      {
+        "requirement": "responsive and performance acceptance",
+        "reason": "Baseline responsive/accessibility controls exist, but the full shared acceptance receipt is not recorded.",
+        "next_action": "Run and record the shared responsive-performance matrix before claiming full standards alignment."
+      }
+    ]
+  }
+}
