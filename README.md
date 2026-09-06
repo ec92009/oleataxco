@@ -42,7 +42,7 @@ Deployment is handled by `.github/workflows/pages.yml`. The workflow stages only
 
 ## Current Build
 
-- Visible source candidate: `v249.0`; production remains `v144.5` until owner-approved release
+- Visible production release: `v249.1`
 - Main draft site: `index.html`
 - Design preview: `preview.html`
 - Theme, settings, and glass-effect assets: `assets/`
@@ -53,6 +53,7 @@ Deployment is handled by `.github/workflows/pages.yml`. The workflow stages only
 - `v144.4` fixes the shared policy-page header so the logo stays compact and Privacy, Terms, and Data Deletion open with their content visible
 - `v144.5` removes native inquiry-form submission, preventing personal inquiry fields from reaching the site URL or host when JavaScript is unavailable
 - `v249.0` adds the monitorable-site candidate contract and stable CTA IDs; WST preview instrumentation is build-gated and excluded from production artifacts by default
+- `v249.1` records owner and policy approval and activates sessionless aggregate homepage visits and CTA presses through an explicit production build flag
 - Includes a gear settings modal with version, English/French/Spanish language preference, day/night theme, transparency, and translucency controls
 - Production site: `https://oleataxco.com/` on the direct-upload Cloudflare Pages project `oleataxco`; source is versioned in GitHub and production is deployed from the sanitized `_site` artifact
 

@@ -4,19 +4,19 @@
   "name": "Olea Tax Co",
   "production_url": "https://oleataxco.com/",
   "ownership_verified": true,
-  "approval_status": "awaiting",
+  "approval_status": "approved",
   "beacon_verified": false,
   "operational_state": "partial",
   "monitorability": {
     "contract_version": "wst.monitorable.v1",
     "owner_role": "Olea Tax Co site owner",
-    "approval_ref": null,
+    "approval_ref": "WST-28: Kelly approval and policy review relayed by Elie on 2026-09-06",
     "route_scope": ["/"],
     "surfaces": [
       {
         "environment": "development",
         "url": "http://localhost:8000/",
-        "version": "249.0",
+        "version": "249.1",
         "version_url": "http://localhost:8000/VERSION",
         "note": "Local source review surface; the server need not be running."
       },
@@ -37,17 +37,17 @@
       {
         "environment": "production",
         "url": "https://oleataxco.com/",
-        "version": "144.5",
-        "version_url": null,
-        "note": "Current Cloudflare Pages production surface; WST browser instrumentation is not enabled."
+        "version": "249.1",
+        "version_url": "https://oleataxco.com/VERSION",
+        "note": "Approved Cloudflare Pages production surface with sessionless aggregate homepage page-view and CTA instrumentation."
       }
     ],
     "capabilities": {
       "browser_traffic": {
-        "state": "planned",
-        "source": null,
-        "freshness_hours": null,
-        "next_action": "Obtain owner approval and policy review before enabling WST production page views."
+        "state": "implemented",
+        "source": "WST browser beacon in approved sessionless aggregate mode",
+        "freshness_hours": 24,
+        "next_action": "Verify production receipts separately in WST and distinguish quiet traffic from collection failure."
       },
       "edge_traffic": {
         "state": "planned",
@@ -56,10 +56,10 @@
         "next_action": "Verify read-only Cloudflare aggregate access and reconcile the declared analytics configuration with the absent live-page beacon."
       },
       "cta": {
-        "state": "planned",
-        "source": null,
-        "freshness_hours": null,
-        "next_action": "Preserve the ten stable CTA IDs and activate them only after owner approval."
+        "state": "implemented",
+        "source": "WST browser beacon with ten stable CTA identifiers",
+        "freshness_hours": 24,
+        "next_action": "Verify production CTA receipts separately in WST; treat presses as intent, not accepted inquiries."
       },
       "conversions": {
         "state": "planned",
@@ -77,7 +77,7 @@
         "state": "planned",
         "source": null,
         "freshness_hours": null,
-        "next_action": "Use privacy-safe field measurements only after policy approval and sufficient samples."
+        "next_action": "Use privacy-safe field measurements when sufficient samples exist."
       },
       "lab_performance": {
         "state": "planned",
@@ -100,25 +100,20 @@
     ],
     "conversion_receipts": [],
     "privacy_profile": "wst.event.v1",
-    "consent_authority": "disabled",
-    "collector_url": null,
+    "consent_authority": "approved-cookieless",
+    "collector_url": "https://web-signals-collector.ec92009.workers.dev/v1/events",
     "performance_profile": "wst.responsive-performance.v1",
     "standards_profile": "elies-websites",
     "standards_profile_version": "elies-websites.v1",
     "standards_status": "partial",
     "standards_evidence": [
-      "The v249.0 source preserves Olea's verified services, inquiry flow, translations, policy routes, settings, theme controls, reduced-motion behavior, and fixed bottom-right version pill.",
+      "The v249.1 release preserves Olea's verified services, inquiry flow, translations, policy routes, settings, theme controls, reduced-motion behavior, and fixed bottom-right version pill.",
       "Ten stable CTA identifiers cover inquiry discovery, service navigation, email preparation, direct email, footer, and mobile actions without collecting form contents.",
-      "The build keeps synthetic monitoring and noindex headers exclusive to an explicit WST_PREVIEW artifact; the live production artifact remains unchanged."
+      "The build separates WST_PREVIEW synthetic/noindex behavior from explicitly approved WST_PRODUCTION sessionless aggregate collection, while the default build remains uninstrumented."
     ],
-    "standards_next_action": "Obtain owner/policy approval, then complete the 320/375/390/768/1280, landscape, 200% zoom, keyboard, reduced-motion, fixed-control, and lab-performance acceptance matrix.",
-    "disable_tracking": "Build without WST_PREVIEW=1; the production artifact then contains no WST beacon or monitoring disclosure, while all site interactions remain unchanged.",
+    "standards_next_action": "Complete the 320/375/390/768/1280, landscape, 200% zoom, keyboard, reduced-motion, fixed-control, and lab-performance acceptance matrix.",
+    "disable_tracking": "Build without WST_PRODUCTION=1 or WST_PREVIEW=1; the artifact then contains no WST beacon or monitoring disclosure, while all site interactions remain unchanged.",
     "exceptions": [
-      {
-        "requirement": "owner approval and policy review",
-        "reason": "No Olea site-owner approval for WST production instrumentation is recorded.",
-        "next_action": "Obtain written owner approval and confirm the click-counting policy language before production activation."
-      },
       {
         "requirement": "analytics source reconciliation",
         "reason": "The repository and privacy policy declare Cloudflare Web Analytics, but the live homepage probe exposes no browser analytics beacon.",
